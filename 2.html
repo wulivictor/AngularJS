@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<p>使用 $rootScope和$Scope来在各个controller心进行数据交互</p>
+<div ng-app="myApp">
+    <div ng-controller="myctrl">
+        {{name}}
+        {{$root.location}}
+        {{$root.location1}}
+        <input type="button" value="努力学习前端" ng-click="sayhello()">
+
+    </div>
+    <div ng-controller="myctrl1">
+        {{name}}
+        {{$root.location}}
+        {{$root.location1}}
+
+    </div>
+</div>
+
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myctrl', function ($scope, $rootScope) {
+        $scope.name = '吴礼';
+        $rootScope.location = '黄石市公安局';
+
+
+
+        $scope.sayhello=function(){
+                    alert("hello abc!");
+        }
+
+        // var temp=$rootScope.location1;
+        // alert(temp);
+
+    });
+    app.controller('myctrl1', function ($scope, $rootScope) {
+        $scope.name = '林波';
+        $rootScope.location1 = '三亚会所';
+    });
+
+
+</script>
+
+
+</body>
+</html>

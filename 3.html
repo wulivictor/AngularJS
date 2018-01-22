@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<p>数据绑定和 遍历数据的结合</p>
+<div ng-app="myApp">
+    <div ng-controller="myctrl">
+        <ul>
+            <li ng-repeat="x in  persons  track by $index"> 姓名是：{{x}} <input type="button" value="删除"
+                                                                                   ng-click="del($index)"></li>
+        </ul>
+        <p>添加名字到列表<input type="text"  ng-model="name"/> <input type="button" value="添加名字"
+                                                                                ng-click="add()"/></p>
+    </div>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myctrl',function($scope,$rootScope){
+
+        $scope.persons = ['Alice', 'Bob', 'Cindy', 'Eric'];
+        $scope.del = function (index) {
+            $scope.persons.splice(index, 1);
+        }
+
+
+        $scope.add = function () {
+            $scope.persons.push( $scope.name);
+        }
+    })
+</script>
+</body>
+</html>
+
+
+<!--angular.module('myapp',[])-->
+<!--.controller('myContrl',function($scope,$rootScope){-->
+<!--// $rootScope 根作用域，在素有的控制器中都可以用-->
+<!--$scope.name = '';-->
+<!--$scope.names = ["name1","name2","name3","name4","name4"];-->
+<!--$scope.sayHellow = function(){-->
+<!--$scope.greeting = "Hello," + $scope.name + "!";-->
+<!--}-->
+
+<!--$scope.delPerson = function(index){-->
+<!--// 将点击删除的对象从数组中移除，angular会自动更新列表-->
+<!--$scope.names.splice(index,1);-->
+<!--}-->
+<!--$scope.addPerson = function(name){-->
+<!--// 输入的对象添加到数组，angular会自动更新列表-->
+<!--$scope.names.push(name);-->
+<!--}-->
+
+<!--$rootScope.lastname = "Refsnes";-->
+<!--});-->
+<!--//手动初始化-->
+<!--angular.bootstrap(document,['myapp']);-->
+
+
+

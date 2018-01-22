@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="myctrl" ng-init="name='wuli'">
+    <h1>angularJS过滤器，讲字符串转换成大写</h1>
+    <p>{{name |uppercase}}</p>
+    <p>{{name |uppercase}}</p>
+    <p>{{name |uppercase}}</p>
+
+
+
+</div>
+<script>
+
+var app=angular.module('myapp',[]);
+app.controller('myctrl',function($scope){
+
+    $scope.firstname="wu";
+$scope.lastname="li";
+
+
+
+})
+
+</script>
+</body>
+</html>

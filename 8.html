@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="static/angular.js"></script>
+</head>
+<body>
+
+
+<p>AngularJs中的服务</p>
+<div ng-app="myapp" ng-controller="myctrl">
+    </select  ng-init="selectedName = names[0]" ng-model="selectedName" ng-options="x for x in names">
+    </select>
+
+
+
+</div>
+<script>
+
+var app=angular.module('myapp',[]);
+app.controller('myctrl', function($scope, $http) {
+    $http({
+        method:'get',
+        url:'static/data.json',
+    }).then(function successCallback(response) {
+
+        //成功的代码
+
+        $scope.data=response.data.records;
+
+
+        var arr=[];
+
+        for(var i=0;i<$scope.data.length;i++){
+
+
+            arr.push($scope.data[i].Name);
+        }
+        debugger;
+
+
+        $scope.names=arr;
+
+
+    },function errorCallback(response){
+
+        debugger;
+        //失败的代码
+        alert(response);
+
+
+    })
+});
+
+
+
+
+</script>
+</body>
+</html>

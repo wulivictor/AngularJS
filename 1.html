@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-app=""  ng-init="name='a'">
+<form name ="a">
+ <input type="email"    name="b" ng-model="myAdress"/>
+    <span ng-show="a.b.$error.email">如果出错我就显示 </span>
+</form>
+</div>
+
+<!--<div ng-app="" ng-init="names=['Jani','Hege','Kai']">-->
+    <!--<p>使用 ng-repeat 来循环数组</p>-->
+    <!--<ul>-->
+        <!--<li ng-repeat="x in names">-->
+            <!--{{ x }}-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<script>-->
+  <!--var app=angular.module('myApp',[]);-->
+    <!--app.controller('myctrl',function($scope){-->
+    <!--$scope.name='Victor';-->
+  <!--});-->
+<!--</script>-->
+
+<p>使用 ng-model 指令来绑定输入域的值到控制器的属性。</p>
+
+</body>
+</html>
