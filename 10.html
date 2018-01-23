@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="static/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/reset.css">
+
+</head>
+<body>
+<p>使用ng-repeat做选择框</p>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+ <select ng-model="mycity">
+
+     <option ng-repeat="x in data" value="{{x.City}}">{{x.Name}}</option>
+ </select>
+
+    的住址是：<span style="color: red;">{{mycity}}</span>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope,$http) {
+
+        $http({
+            method:'get',
+            url:'static/key.json',
+        }).then(function successCallback(response){
+                debugger;
+           $scope.data=response.data;
+           var str={name:'wuli',age:16,collage:'hk'};
+            }, function errorCallback(response){
+            })
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

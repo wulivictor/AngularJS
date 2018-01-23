@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="static/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/reset.css">
+
+</head>
+<body>
+<p>使用ng-repeat做数据表格</p>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    <table border=1>
+        <tr>
+            <td>姓名</td>
+            <td>城市</td>
+            <td>国家</td>
+        </tr>
+
+        <tr ng-repeat="x in data | orderBy: 'Country'">
+            <td >{{$index+1}}</td>
+            <td >{{x.Name}}</td>
+            <td >{{x.City}}</td>
+            <td >{{x.Country}}</td>
+        </tr>
+    </table>
+
+<input type="button" value="关闭" onclick="close()" ng-disabled="true">
+
+
+    <p ng-show="true">可以显示</p>
+    <p ng-hide="true">bu可以显示</p>
+
+
+
+
+
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope,$http) {
+
+        $http({
+            method:'get',
+            url:'static/key.json',
+        }).then(function successCallback(response){
+                debugger;
+           $scope.data=response.data;
+
+            }, function errorCallback(response){
+            })
+    })
+
+
+
+
+
+    function close(){
+        window.close();
+    }
+
+</script>
+
+
+</body>
+</html>
