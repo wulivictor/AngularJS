@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/reset.css">
+
+</head>
+<body>
+
+<h2>使用ng-include来包含页面</h2>
+<div ng-app="myapp" ng-controller="myctrl">
+<div ng-include="'12.html'"></div>
+</div>
+
+
+
+<script>
+    var app=angular.module('myapp',[]);
+    app.controller('myctrl',function ($http) {
+
+
+//         $http({
+//             url:"http://www.baidu.com",
+//             type:"get",
+//             dataType:"jsonp",
+//         }).then(function successCallback(response){
+// debugger;
+//         },function errorCallback(response){
+//
+//
+//
+//         })
+
+
+
+
+        $http .jsonp("https://api.github.com?callback=JSON_CALLBACK") .success(function(data) {
+            debugger;
+            alert(data)
+
+            // 数据
+        });
+
+
+
+    })
+
+
+
+</script>
+
+
+</body>
+</html>
+
+

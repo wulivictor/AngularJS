@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/reset.css">
+
+</head>
+<body>
+<h2>mvc中依赖注入</h2>
+<!--1 简单的依赖注入     value  和factory -->
+
+<!--<div ng-app="myapp" ng-controller="myctrl">-->
+
+
+    <!--<span>{{result}}</span>-->
+
+<!--</div>-->
+
+
+<!--<script>-->
+    <!--var app = angular.module('myapp', []);-->
+
+    <!--app.value('length', 5);-->
+
+    <!--app.factory('mycal', function () {-->
+        <!--var c = new Object();-->
+        <!--c.cal = function (a, b) {-->
+            <!--return a * b;-->
+        <!--}-->
+        <!--return c;-->
+    <!--});-->
+
+
+    <!--app.controller('myctrl', function ($scope,mycal,length) {-->
+        <!--debugger;-->
+        <!--$scope.result = mycal.cal(length,length);-->
+    <!--})-->
+<!--</script>-->
+
+<!--2使用value factory service -->
+
+<div ng-app="myapp" ng-controller="myctrl">
+
+
+<input type="number" ng-model="param">
+
+    <br/>
+    result:<span>{{result}}</span>
+    <br/>
+
+    <input type="button" value="x的平方" ng-click="calx()">
+    <br/>
+
+</div>
+
+
+<script>
+    var app = angular.module('myapp', []);
+
+    //基础的业务层
+    app.factory('baseservice',function () {
+        var c={};
+        c.method=function (a) {
+            return a*a;
+        }
+        return c;
+    })
+    
+    //核心业务层
+    app.service('superservice',function (baseservice) {
+        this.supercalx=function (a) {                              //this就是superservice
+           return baseservice.method(a);                           //实现接口
+        }
+
+
+    })
+
+    //控制层调用业务层
+    app.controller('myctrl',function (superservice,$scope) {
+        $scope.calx=function () {
+            $scope.result=superservice.supercalx($scope.param);     //相当调用接口
+        }
+    })
+
+
+</script>
+
+</body>
+</html>
+
+
