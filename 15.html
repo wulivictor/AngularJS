@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>provide和service还有factory</title>
+    <script src="static/angular.js"></script>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="myctrl">
+    <h2>{{result}}.载入{{$root.message}}数据</h2>
+    <table border="1">
+        <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>城市</th>
+        <th>国籍</th>
+        </tr>
+
+
+
+        <tr ng-repeat="x in data">
+            <td>{{$index}}</td>
+            <td>{{x.Name}}</td>
+            <td>{{x.City}}</td>
+            <td>{{x.Country}}</td>
+        </tr>
+
+
+<!--{{data}}-->
+
+    </table>
+
+
+
+</div>
+    <script>
+        var app=angular.module("myapp",[]);
+
+        app.value("myparam",1);
+        
+        //配置config
+        app.config(function ($provide) {
+
+            $provide.provider("loaddata",function () {
+                this.$get=function () {
+                    var data={};
+                    data.ajax=function (a) {
+                    return a*a;
+                    }
+                return data;
+                }
+            })
+            
+        })
+
+
+    app.service("myservice",function (loaddata) {
+
+        this.get=function (a) {
+
+            return loaddata.ajax(a)
+        }
+
+    })
+        app.controller("myctrl",function ($scope,myparam,myservice,$http,$rootScope) {
+            $scope.result=myservice.get(myparam);
+            $rootScope.message="员工";
+
+            $http({
+                url:'static/data.json',
+                type:'get'
+            }).then(function successCallback(response){
+                $scope.data=response.data.records;
+            },
+            function errorCallback(){
+                alert('error');
+            })
+
+
+        })
+
+    </script>
+
+
+
+</body>
+</html>
