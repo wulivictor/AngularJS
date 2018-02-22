@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <script src="static/angular.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/reset.css">
+    <script src="angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="reset.css">
 
 </head>
 <body>
@@ -11,13 +11,10 @@
 
 <p>AngularJs中的服务</p>
 <div ng-app="myapp" ng-controller="myctrl">
+    </select  ng-init="selectedName = names[0]" ng-model="selectedName" ng-options="x for x in names">
+    </select>
 
-    <ul ng-repeat="x in data">
 
-
-        <li>{{'name\t\t'+x.Name+'\t\tcountry\t\t'+x.Country+'\t\tcity\t\t'+x.City}}</li>
-
-    </ul>
 
 </div>
 <script>
@@ -29,10 +26,22 @@ app.controller('myctrl', function($scope, $http) {
         url:'static/data.json',
     }).then(function successCallback(response) {
 
-        debugger;
         //成功的代码
 
         $scope.data=response.data.records;
+
+
+        var arr=[];
+
+        for(var i=0;i<$scope.data.length;i++){
+
+
+            arr.push($scope.data[i].Name);
+        }
+        debugger;
+
+
+        $scope.names=arr;
 
 
     },function errorCallback(response){
@@ -44,21 +53,6 @@ app.controller('myctrl', function($scope, $http) {
 
     })
 });
-
-
-
-//
-// app.controller('myctrl',function ($scope,$interval) {
-//     $scope.tittle="你好，两秒后跳转";
-//
-//     $interval(function(){
-//
-//         $scope.tittle=new Date().toLocaleTimeString();
-//
-//     },1000);
-//
-//
-// } );
 
 
 

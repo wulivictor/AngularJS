@@ -3,20 +3,19 @@
 <head>
     <meta charset="utf-8">
     <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/reset.css">
+    <link rel="stylesheet"  type="text/css" href="reset.css">
 
 </head>
 <body>
 
 <h2>验证实例</h2>
 
-<form ng-app="myApp" ng-controller="validateCtrl"
-      name="myForm" novalidate>
+<form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
 
     <p>用户名:<br>
         <input type="text" name="user" ng-model="user" required>
         <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
-<span ng-show="myForm.user.$error.required">用户名是必须的。</span>
+<span ng-show="myForm.user.$error.required">用户名是必须有0的。</span>
 </span>
     </p>
 
