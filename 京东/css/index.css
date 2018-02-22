@@ -1,0 +1,463 @@
+@charset "UTF-8";
+.banner604  {
+
+    width: 100%;
+    position: relative;
+}
+
+
+.banner604 a.touch{
+    width: 100%;
+    height: 620px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: url("../images/banner.jpg") no-repeat;
+    background-position: center top;
+    z-index: 1;
+}
+
+
+.main{
+    height: 455px;
+    position: relative;
+    z-index: 100;
+}
+
+.banner-img{
+    width: 732px;
+    height: 455px;
+    float: left;
+    margin-left: 219px;
+    margin-top: 10px;
+    position: relative;
+
+
+}
+
+.bar_left{
+    font: 500 18px/64px "SimSun";
+    width: 28px;
+    height: 64px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    color: #ebf2f3;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    margin-top:  -32px;
+
+
+}
+
+.bar_right{
+    font: 500 18px/64px "SimSun";
+    width: 28px;
+    height: 64px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    color: #ebf2f3;
+    text-align: center;
+    top: 50%;
+    right:  1px;
+    margin-top:  -32px;
+
+}
+
+.slidebar{
+    position: absolute;
+    bottom:  0;
+    left: 50%;
+    margin-left: -72.5px;
+
+}
+.click_nmber{
+    text-align: center;
+    font: 500 12px/20px "微软雅黑";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #3e3e3e;
+    float: left;
+    margin-right: 5px;
+    color: #ffffff;
+}
+.click_nmber:hover{
+    background-color: #b61b1f;
+    color: #ffffff;
+
+}
+
+
+
+
+.banner604 .w .night{
+    float: left;
+    width: 210px;
+    height: 150px;
+    margin-bottom: 5px;
+
+    
+}
+.banner604 .w p{
+    display: block;
+    float: left;
+
+
+}
+
+.banner604 .w p img{
+    height: 150px;
+    width: 247px;
+}
+
+.rightbar{
+
+    width: 250px;
+    height: 453px;
+   float: right;
+    margin-top: 10px;
+    border: 1px solid #e4e4e4;
+}
+.cl{
+    clear: both;
+    height: 8px;
+}
+.box1{
+    width: 250px;
+    height: 44px;
+    border-bottom: 1px dotted #e8e8e7;
+}
+
+
+.extra{
+    height: 161px;
+}
+
+div.special{
+    float: left;
+}
+.mrr{
+    margin-right: 1px;
+}
+.box1 .s1{
+    font: 400 12px/44px "微软雅黑";
+    margin: 0 16px;
+}
+.box1 .s2{
+    font: 400 12px/44px "SimSun";
+    margin: 0 8px;
+    display: block;
+    float: right;
+    margin-right: 17px;
+}
+.box2{
+    height: 158px;
+    background-color: #ffffff;
+    border-bottom: 1px dashed #e8e8e7;
+
+
+}
+.box2 ul li{
+    font: 400 12px/30px "宋体";
+    padding: 0 17px;
+}
+.box3{
+    font: 400 12px/45px "微软雅黑";
+    border-bottom: 1px dotted #e8e8e7;
+    padding: 0 16px;
+
+
+}
+
+.box4 {
+
+    font: 400 12px/45px "微软雅黑";
+}
+.box4 .a1{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon1{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px 0px;
+    margin: 0 auto;
+    margin-top: 5px;
+
+
+}
+.box4 .a1:hover{
+
+}
+
+.box4 .a2{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon2{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -24px;
+    margin-top: 5px;
+
+}
+.box4 .a2:hover{
+
+}
+
+
+.box4 .a3{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+.box4 .icon3{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -50px;
+    margin-top: 5px;
+
+}
+
+
+.box4 .a4{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+.box4 .icon4{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -73px;
+    margin-top: 5px;
+
+}
+.box4 .a4:hover{
+
+}
+
+.box4 .a5{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon5{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -98px;
+    margin-top: 5px;
+
+}
+.box4 .a5:hover{
+
+}
+
+.box4 .a6{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon6{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -122px;
+    margin-top: 5px;
+
+}
+.box4 .a6:hover{
+
+
+}
+
+.box4 .a7{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon7{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -149px;
+    margin-top: 5px;
+
+}
+.box4 .a7:hover{
+
+}
+
+.box4 .a8{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon8{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -174px;
+    margin-top: 5px;
+
+}
+.box4 .a8:hover{
+
+}
+
+.box4 .a9{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon9{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -199px;
+    margin-top: 5px;
+
+}
+.box4 .a9:hover{
+
+}
+
+.box4 .a10{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon10{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -225px;
+    margin-top: 5px;
+
+}
+.box4 .a10:hover{
+
+}
+
+.box4 .a11{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon11{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -248px;
+    margin-top: 5px;
+
+}
+.box4 .a11:hover{
+
+}
+
+.box4 .a12{
+    display: block;
+    width: 60.5px;
+    height: 65.5px;
+    float: left;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+.box4 .icon12{
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    background: url("../images/icon_lifeserv.png") no-repeat;
+    background-position: -24px -272px;
+    margin-top: 5px;
+
+}
+.box4 .a12:hover{
+
+}
