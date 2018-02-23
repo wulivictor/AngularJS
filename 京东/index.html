@@ -173,10 +173,14 @@
 
 <div class="w main">
 
-    <div class="banner-img">
-        <a class="bar_left" href="javascript:;"><</a>
+    <div class="banner-img" id="banner-img">
         <img src="images/slider1.jpg" id="banner_img_pic"/>
-        <a class="bar_right" href="javascript:;">></a>
+
+        <div class="arrow" id="arrow">
+            <a class="bar_left" href="javascript:;"><</a>
+            <a class="bar_right" href="javascript:;">></a>
+
+        </div>
 
         <div class="slidebar">
             <a class="click_nmber" id="click_nmber1" href="javascript:;">1</a>
@@ -192,7 +196,7 @@
         var banner_img_pic = document.getElementById("banner_img_pic");
         var click_nmber1 = document.getElementById("click_nmber1");
         click_nmber1.onmouseover = function () {
-            banner_img_pic.src = "images/11.jpg"
+            banner_img_pic.src = "images/slider1.jpg"
         };
         var click_nmber2 = document.getElementById("click_nmber2");
         click_nmber2.onmouseover = function () {
@@ -214,6 +218,35 @@
         click_nmber6.onmouseover = function () {
             banner_img_pic.src = "images/66.jpg"
         };
+
+        //解决左右滑块隐藏
+
+        var banner_img = document.getElementById("banner-img");
+        var arrow = document.getElementById("arrow");
+
+        banner_img.onmouseover=function () {
+            arrow.style.display="block";
+        }
+        banner_img.onmouseout=function () {
+            arrow.style.display="none";
+
+        }
+
+        //计时器
+        var a=1
+        click_nmber1.style.backgroundColor="#b61b1f";
+
+        function slideimg() {
+            var img_arr=["images/slider1.jpg","images/22.jpg","images/33.jpg","images/44.jpg","images/55.jpg","images/66.jpg"];
+            banner_img_pic.src=img_arr[a%6];
+            var click_nmber = document.getElementById("click_nmber"+a%7+"");
+            click_nmber.style.backgroundColor="#b61b1f";
+            a++;
+
+        }
+        window.setInterval(slideimg,3000);
+
+
     </script>
     <!--右边导航   -->
 
@@ -463,7 +496,6 @@
         </p>
 
     </div>
-
 
 </div>
 

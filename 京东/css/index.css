@@ -26,7 +26,7 @@
 }
 
 .banner-img{
-    width: 732px;
+    width: 730px;
     height: 455px;
     float: left;
     margin-left: 219px;
@@ -36,17 +36,31 @@
 
 }
 
+.arrow{
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    width: 100%;
+
+}
+.arrow a:hover{
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+
+}
+
 .bar_left{
     font: 500 18px/64px "SimSun";
     width: 28px;
     height: 64px;
-    position: absolute;
     background-color: rgba(0,0,0,0.2);
     color: #ebf2f3;
     text-align: center;
-    top: 50%;
-    left: 0;
-    margin-top:  -32px;
+    float: left;
+    /*top: 50%;*/
+    /*left: 0;*/
+    /*margin-top:  -32px;*/
 
 
 }
@@ -55,13 +69,13 @@
     font: 500 18px/64px "SimSun";
     width: 28px;
     height: 64px;
-    position: absolute;
     background-color: rgba(0,0,0,0.2);
     color: #ebf2f3;
     text-align: center;
-    top: 50%;
-    right:  1px;
-    margin-top:  -32px;
+    float: right;
+    /*top: 50%;*/
+    /*right:  1px;*/
+    /*margin-top:  -32px;*/
 
 }
 
@@ -461,3 +475,4 @@ div.special{
 .box4 .a12:hover{
 
 }
+
