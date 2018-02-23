@@ -49,11 +49,11 @@
     </div>
 </div>
 <!-- banner广告区域 -->
-<div class="banner">
+<div class="banner" id="ad">
     <div class="w">
         <img src="images/topbanner.jpg"/>
         <a href="javasrcipt:;">
-            <div class="close-banner">
+            <div class="close-banner" id="close-banner">
 
             </div>
         </a>
@@ -61,6 +61,15 @@
     </div>
 
 </div>
+
+
+<script>
+    var close_banner = document.getElementById("close-banner");
+    close_banner.onclick = function () {
+        document.getElementById("ad").hidden = true;
+    }
+
+</script>
 
 
 <div class="seacher">
@@ -165,22 +174,47 @@
 <div class="w main">
 
     <div class="banner-img">
-        <a class="bar_left"href="javascript:;"><</a>
-        <img src="images/slider1.jpg"/>
-        <a class="bar_right"href="javascript:;">></a>
+        <a class="bar_left" href="javascript:;"><</a>
+        <img src="images/slider1.jpg" id="banner_img_pic"/>
+        <a class="bar_right" href="javascript:;">></a>
 
         <div class="slidebar">
-            <a class="click_nmber"  href="">1</a>
-            <a class="click_nmber"  href="">2</a>
-            <a class="click_nmber"  href="">3</a>
-            <a class="click_nmber"  href="">4</a>
-            <a class="click_nmber"  href="">5</a>
-            <a class="click_nmber" style="margin-right: 0" href="">6</a>
+            <a class="click_nmber" id="click_nmber1" href="javascript:;">1</a>
+            <a class="click_nmber" id="click_nmber2" href="javascript:;">2</a>
+            <a class="click_nmber" id="click_nmber3" href="javascript:;">3</a>
+            <a class="click_nmber" id="click_nmber4" href="javascript:;">4</a>
+            <a class="click_nmber" id="click_nmber5" href="javascript:;">5</a>
+            <a class="click_nmber" style="margin-right: 0" id="click_nmber6" href="">6</a>
             <div class="cl"></div>
         </div>
     </div>
-
-
+    <script>
+        var banner_img_pic = document.getElementById("banner_img_pic");
+        var click_nmber1 = document.getElementById("click_nmber1");
+        click_nmber1.onmouseover = function () {
+            banner_img_pic.src = "images/11.jpg"
+        };
+        var click_nmber2 = document.getElementById("click_nmber2");
+        click_nmber2.onmouseover = function () {
+            banner_img_pic.src = "images/22.jpg"
+        };
+        var click_nmber3 = document.getElementById("click_nmber3");
+        click_nmber3.onmouseover = function () {
+            banner_img_pic.src = "images/33.jpg"
+        };
+        var click_nmber4 = document.getElementById("click_nmber4");
+        click_nmber4.onmouseover = function () {
+            banner_img_pic.src = "images/44.jpg"
+        };
+        var click_nmber5 = document.getElementById("click_nmber5");
+        click_nmber5.onmouseover = function () {
+            banner_img_pic.src = "images/55.jpg"
+        };
+        var click_nmber6 = document.getElementById("click_nmber6");
+        click_nmber6.onmouseover = function () {
+            banner_img_pic.src = "images/66.jpg"
+        };
+    </script>
     <!--右边导航   -->
 
     <div class="rightbar">
@@ -199,7 +233,6 @@
             </ul>
 
 
-
         </div>
         <div class="box3">
             生活服务
@@ -207,10 +240,14 @@
         </div>
         <div class="box4">
 
-            <a class="a1" href=""><s class="icon1"></s>话费</a>    <a class="a2" href=""><s class="icon2"></s>飞机</a>    <a class="a3" href=""><s class="icon3"></s>彩票</a>
-            <a class="a4" href=""><s class="icon4"></s>游戏</a>    <a class="a5" href=""><s class="icon5"></s>医疗</a>    <a class="a6" href=""><s class="icon6"></s>金融</a>
-            <a class="a7" href=""><s class="icon7"></s>住房</a>    <a class="a8" href=""><s class="icon8"></s>用水</a>    <a class="a9" href=""><s class="icon9"></s>理财</a>
-            <a class="a10" href=""><s class="icon10"></s>账单</a>    <a class="a11" href=""><s class="icon11"></s>借贷</a>    <a class="a12" href=""><s class="icon12"></s>保障</a>
+            <a class="a1" href=""><s class="icon1"></s>话费</a> <a class="a2" href=""><s class="icon2"></s>飞机</a> <a
+                class="a3" href=""><s class="icon3"></s>彩票</a>
+            <a class="a4" href=""><s class="icon4"></s>游戏</a> <a class="a5" href=""><s class="icon5"></s>医疗</a> <a
+                class="a6" href=""><s class="icon6"></s>金融</a>
+            <a class="a7" href=""><s class="icon7"></s>住房</a> <a class="a8" href=""><s class="icon8"></s>用水</a> <a
+                class="a9" href=""><s class="icon9"></s>理财</a>
+            <a class="a10" href=""><s class="icon10"></s>账单</a> <a class="a11" href=""><s class="icon11"></s>借贷</a> <a
+                class="a12" href=""><s class="icon12"></s>保障</a>
         </div>
     </div>
 
@@ -429,5 +466,6 @@
 
 
 </div>
+
 </body>
 </html>
