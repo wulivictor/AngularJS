@@ -294,14 +294,26 @@ s, i, em {
     border: 2px solid #b61d1d;
 }
 
-.shuru .jd-input {
+.jd-input {
     height: 32px;
     width: 434px;
-    font: 500 16px/32px "微软雅黑";
-    color: #666666;
+    font: 500 14px/32px "微软雅黑";
+    color: rgb(153,153,153);
+
     padding: 0 10px 0 10px;
+    float: left;
+
 }
 
+.jd-input-after {
+    height: 32px;
+    width: 434px;
+    font: 500 14px/32px "微软雅黑";
+    padding: 0 10px 0 10px;
+    float: left;
+    color: #666666;
+
+}
 .shuru .jd-searchbtn {
 
     height: 34px;

@@ -69,9 +69,14 @@
         document.getElementById("ad").hidden = true;
     }
 
+    //封装选择器
+    function $(id) {
+        return document.getElementById(id);
+
+    }
+    //设置轮播切换图
     window.onload=function () {
         function  slidepic(number) {
-            debugger;
 
             var click_nmber = document.getElementById("click_nmber"+number);
             click_nmber.onmousemove=function () {
@@ -81,14 +86,36 @@
 
         }
 
-        slidepic(1)
-        slidepic(2)
-        slidepic(3)
-        slidepic(4)
-        slidepic(5)
-        slidepic(6)
+        slidepic(1);
+        slidepic(2);
+        slidepic(3);
+        slidepic(4);
+        slidepic(5);
+        slidepic(6);
+
+
+        //点击输入框清除文字
+        var myinput=$("jd-input");
+        myinput.onfocus=function () {
+            if(myinput.value=="iPhone8 256G"){
+                myinput.value="";
+                myinput.className="jd-input-after";
+            }
+        }
+
+        myinput.onblur=function () {
+            debugger;
+            if(myinput.value===""){
+                myinput.value="iPhone8 256G";
+                myinput.className="jd-input"
+            }
+
+           //alert(this.value);
+        }
 
     }
+
+
 
 </script>
 
@@ -105,7 +132,7 @@
 
         <div class="shuru fl">
             <div class="shurukuang">
-                <input type="text" class="jd-input fl" value="iPhone8 256G"/>
+                <input type="text" class="jd-input fl" id="jd-input" value="iPhone8 256G"/>
                 <button class="jd-searchbtn fl" id="jd-searchbtn">搜索</button>
 
             </div>
