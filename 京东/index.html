@@ -69,6 +69,27 @@
         document.getElementById("ad").hidden = true;
     }
 
+    window.onload=function () {
+        function  slidepic(number) {
+            debugger;
+
+            var click_nmber = document.getElementById("click_nmber"+number);
+            click_nmber.onmousemove=function () {
+                banner_img_pic.src = "images/"+number+number+".jpg"
+
+            }
+
+        }
+
+        slidepic(1)
+        slidepic(2)
+        slidepic(3)
+        slidepic(4)
+        slidepic(5)
+        slidepic(6)
+
+    }
+
 </script>
 
 
@@ -193,31 +214,7 @@
         </div>
     </div>
     <script>
-        var banner_img_pic = document.getElementById("banner_img_pic");
-        var click_nmber1 = document.getElementById("click_nmber1");
-        click_nmber1.onmouseover = function () {
-            banner_img_pic.src = "images/slider1.jpg"
-        };
-        var click_nmber2 = document.getElementById("click_nmber2");
-        click_nmber2.onmouseover = function () {
-            banner_img_pic.src = "images/22.jpg"
-        };
-        var click_nmber3 = document.getElementById("click_nmber3");
-        click_nmber3.onmouseover = function () {
-            banner_img_pic.src = "images/33.jpg"
-        };
-        var click_nmber4 = document.getElementById("click_nmber4");
-        click_nmber4.onmouseover = function () {
-            banner_img_pic.src = "images/44.jpg"
-        };
-        var click_nmber5 = document.getElementById("click_nmber5");
-        click_nmber5.onmouseover = function () {
-            banner_img_pic.src = "images/55.jpg"
-        };
-        var click_nmber6 = document.getElementById("click_nmber6");
-        click_nmber6.onmouseover = function () {
-            banner_img_pic.src = "images/66.jpg"
-        };
+
 
         //解决左右滑块隐藏
 
