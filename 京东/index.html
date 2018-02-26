@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
     <title>京东</title>
+    <script src="js/jquery-2.1.4.js"></script>
 </head>
 <body>
 <!--京东的导航辅导费栏部分-->
@@ -113,6 +114,27 @@
            //alert(this.value);
         }
 
+
+        //用js对12个按钮进行切图
+
+        var icon_arrays=document.getElementById("box4").getElementsByTagName("s");
+        for(var i=0;i<icon_arrays.length;i++){
+            var a=-25*i;
+            icon_arrays[i].setAttribute("style","background-position-y:"+a+"px");
+
+
+        }
+
+
+
+
+        debugger;
+        $(".box4").$("s").hover(function () {
+            $(this).addClass("s_hover");
+
+        },function () {
+            $(this).removeClass("s_hover");
+        })
     }
 
 
@@ -295,16 +317,21 @@
             生活服务
 
         </div>
-        <div class="box4">
+        <div class="box4" id="box4">
 
-            <a class="a1" href=""><s class="icon1"></s>话费</a> <a class="a2" href=""><s class="icon2"></s>飞机</a> <a
-                class="a3" href=""><s class="icon3"></s>彩票</a>
-            <a class="a4" href=""><s class="icon4"></s>游戏</a> <a class="a5" href=""><s class="icon5"></s>医疗</a> <a
-                class="a6" href=""><s class="icon6"></s>金融</a>
-            <a class="a7" href=""><s class="icon7"></s>住房</a> <a class="a8" href=""><s class="icon8"></s>用水</a> <a
-                class="a9" href=""><s class="icon9"></s>理财</a>
-            <a class="a10" href=""><s class="icon10"></s>账单</a> <a class="a11" href=""><s class="icon11"></s>借贷</a> <a
-                class="a12" href=""><s class="icon12"></s>保障</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>话费</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>飞机</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>彩票</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>游戏</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>医疗</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>金融</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>住房</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>用水</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>理财</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>账单</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>借贷</a>
+            <a class="a" href="javascript:;"><s class="icon"></s>保障</a>
+
         </div>
     </div>
 

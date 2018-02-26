@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select全选操作</title>
+</head>
+<script src="../京东/js/jquery-2.1.4.js"></script>
+<style>
+
+
+
+</style>
+
+
+<body>
+
+
+<input type="button" name="all" id="all" value="全选" onclick="oncl()">
+
+<input type="button" name="un" id="un" value="反选" onclick="ad()">
+
+<br/><br/><br/><br/>
+<div class="box">
+<input type="checkbox" name="country" id="a"><label for="a" >中国</label><br/>
+<input type="checkbox" name="country" id="b"><label for="b" >美国</label><br/>
+<input type="checkbox" name="country" id="c"><label for="c" >英国</label><br/>
+<input type="checkbox" name="country" id="d"><label for="d" >印度</label><br/>
+<input type="checkbox" name="country" id="e"><label for="e" >日本</label><br/>
+<input type="checkbox" name="country" id="f"><label for="f" >韩国</label><br/>
+<input type="checkbox" name="country" id="g"><label for="g" >俄罗斯</label><br/>
+</div>
+<script>
+var a=document.getElementsByClassName("box")[0].getElementsByTagName("input");
+//全选
+function oncl() {
+    for (var i=0;i<a.length;i++){
+
+        a[i].checked=true;
+
+
+    }
+
+
+}
+
+
+//反选
+function  ad() {
+    debugger;
+
+    for (var i=0;i<a.length;i++){
+        if(a[i].checked){
+            a[i].checked=false;
+        }
+        else {
+            a[i].checked=true;
+
+        }
+
+
+    }
+
+}
+
+
+
+
+</script>
+</body>
+</html>
