@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>参数的应用</title>
+
+    <style>
+
+        .box{
+            background-color: #71ff1f;
+            width: 400px;
+            height: 400px;
+            display: block;
+        }
+        #search-txt{
+            position: absolute;
+            top:10px;
+            left:14px;
+            color: #687354;
+            /*cursor: pointer;*/
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <input type="text" id="search">
+    <label id="search-txt" for="search">iPhone6s</label>
+</div>
+<script>
+
+    document.getElementById("search").oninput=function () {
+        debugger;
+        document.getElementById("search-txt").style.display="none";
+    }
+
+</script>
+</body>
+</html>
