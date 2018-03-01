@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
     <title>京东</title>
+    <script src="js/superjs.js"></script>
 </head>
 <body>
 <!--京东的导航辅导费栏部分-->
@@ -61,63 +62,6 @@
     </div>
 
 </div>
-
-
-<script>
-    var close_banner = document.getElementById("close-banner");
-    close_banner.onclick = function () {
-        document.getElementById("ad").hidden = true;
-    }
-
-    //封装选择器
-    function $(id) {
-        return document.getElementById(id);
-
-    }
-    //设置轮播切换图
-    window.onload=function () {
-        function  slidepic(number) {
-
-            var click_nmber = document.getElementById("click_nmber"+number);
-            click_nmber.onmousemove=function () {
-                banner_img_pic.src = "images/"+number+number+".jpg"
-
-            }
-
-        }
-
-        slidepic(1);
-        slidepic(2);
-        slidepic(3);
-        slidepic(4);
-        slidepic(5);
-        slidepic(6);
-
-
-        //点击输入框清除文字
-        var myinput=$("jd-input");
-        myinput.onfocus=function () {
-            if(myinput.value=="iPhone8 256G"){
-                myinput.value="";
-                myinput.className="jd-input-after";
-            }
-        }
-
-        myinput.onblur=function () {
-            debugger;
-            if(myinput.value===""){
-                myinput.value="iPhone8 256G";
-                myinput.className="jd-input"
-            }
-
-           //alert(this.value);
-        }
-
-    }
-
-
-
-</script>
 
 
 <div class="seacher">
@@ -219,9 +163,9 @@
 </div>
 
 
-<div class="w main">
+<div class="w main" id="box">
 
-    <div class="banner-img" id="banner-img">
+    <div class="box" id="banner-img">
         <img src="images/slider1.jpg" id="banner_img_pic"/>
 
         <div class="arrow" id="arrow">
@@ -230,48 +174,12 @@
 
         </div>
 
-        <div class="slidebar">
-            <a class="click_nmber" id="click_nmber1" href="javascript:;">1</a>
-            <a class="click_nmber" id="click_nmber2" href="javascript:;">2</a>
-            <a class="click_nmber" id="click_nmber3" href="javascript:;">3</a>
-            <a class="click_nmber" id="click_nmber4" href="javascript:;">4</a>
-            <a class="click_nmber" id="click_nmber5" href="javascript:;">5</a>
-            <a class="click_nmber" style="margin-right: 0" id="click_nmber6" href="">6</a>
-            <div class="cl"></div>
-        </div>
+
     </div>
-    <script>
 
 
-        //解决左右滑块隐藏
-
-        var banner_img = document.getElementById("banner-img");
-        var arrow = document.getElementById("arrow");
-
-        banner_img.onmouseover=function () {
-            arrow.style.display="block";
-        }
-        banner_img.onmouseout=function () {
-            arrow.style.display="none";
-
-        }
-
-        //计时器
-        var a=1
-        click_nmber1.style.backgroundColor="#b61b1f";
-
-        function slideimg() {
-            var img_arr=["images/slider1.jpg","images/22.jpg","images/33.jpg","images/44.jpg","images/55.jpg","images/66.jpg"];
-            banner_img_pic.src=img_arr[a%6];
-            var click_nmber = document.getElementById("click_nmber"+a%7+"");
-            click_nmber.style.backgroundColor="#b61b1f";
-            a++;
-
-        }
-        window.setInterval(slideimg,3000);
 
 
-    </script>
     <!--右边导航   -->
 
     <div class="rightbar">
@@ -308,13 +216,17 @@
         </div>
     </div>
 
+</div>
+
+
+
 
     <!-- 清除浮动-->
     <div class="cl"></div>
 
 
     <!--banner下面的推荐-->
-    <div class="extra ">
+    <div class="extra w">
         <div class="special">
 
             <img style="width: 207px;height: 152px" src="images/night.jpg"/>
