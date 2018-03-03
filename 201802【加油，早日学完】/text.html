@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .jd-input {
+        height: 32px;
+        width: 100%;
+        font: 500 14px/32px "微软雅黑";
+        color: rgb(153,153,153);
+        /*padding: 0 10px 0 10px;*/
+
+    }
+
+    .jd-input-after {
+        height: 32px;
+        width: 100%;
+        font: 500 14px/32px "微软雅黑";
+        /*padding: 0 10px 0 10px;*/
+        color: #666666;
+
+    }
+    .container{
+        width: 70%;
+        height: 400px;
+        margin: 100px auto;
+        background-color: #0b2e13;
+    }
+
+
+</style>
+<body>
+<div class="container" id="container">
+    <div class="text">
+        <textarea id="jd-input" class="jd-input">微博内容</textarea><br/>
+        <button id="send">发表微博</button>
+    </div>
+
+
+</div>
+    <script>
+    //点击输入框清除文字
+    var myinput=document.getElementById("jd-input");
+    myinput.onfocus=function () {
+        var a=myinput.value;
+        if("微博内容"==a){
+            myinput.value="";
+            myinput.className="jd-input-after";
+        }
+    }
+
+    myinput.onblur=function () {
+        if(myinput.value===""){
+            myinput.value="微博内容";
+            myinput.className="jd-input"
+        }
+
+        //alert(this.value);
+    }
+
+    document.getElementById("send").onclick=function () {
+
+        if(myinput.value=="微博内容"||myinput.value==""){
+            return
+        }
+
+        var div=document.createElement("div");
+        div.setAttribute("class","message");
+        div.innerHTML=myinput.value+"<a href='javascript:;' onclick='del(this)'>删除</a>";
+        document.getElementById("container").appendChild(div);
+
+        myinput.value="";
+
+    }
+
+
+    function  del(obj) {
+        debugger;
+       var a= obj.parentNode;
+       var b=a.parentNode;
+       b.removeChild(a);
+       cle
+
+    }
+</script>
+
+</body>
+</html>

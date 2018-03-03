@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+</head>
+<style>
+    .box{
+        height: 600px;
+        width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .clock{
+        height: 600px;
+        width: 600px;
+        background: url("../images/clock.jpg") no-repeat;
+        position: absolute;
+
+    }
+
+    .hour{
+        width: 30px;
+        height: 600px;
+        background: url("../images/hour.png") no-repeat;
+        position: absolute;
+        left: 50%;
+        margin-left: -15px;
+
+    }
+
+    .minute{
+        width: 30px;
+        height: 600px;
+        background: url("../images/minute.png") no-repeat;
+        position: absolute;
+        left: 50%;
+        margin-left: -15px;
+    }
+
+    .second{
+        width: 30px;
+        height: 600px;
+        background: url("../images/second.png") no-repeat;
+        position: absolute;
+        left: 50%;
+        margin-left: -15px;
+    }
+
+</style>
+<body>
+ <div class="box">
+     <div class="clock" id="clock"></div>
+     <div class="hour"  id="hour"></div>
+     <div class="minute"  id="minute"></div>
+     <div class="second"  id="second"></div>
+ </div>
+
+ <script>
+    var hourpic=document.getElementById("hour");
+    var minutepic=document.getElementById("minute");
+    var secondpic=document.getElementById("second");
+
+
+    function time() {
+        var nowtime=new Date();
+        var hour=nowtime.getHours();
+        var minute=nowtime.getMinutes()
+        var second=nowtime.getSeconds();
+
+        if(hour>12){
+            hour=hour-12;
+            hour=hour+minute/60;
+            hour=hour*30;
+            hourpic.style.transform="rotate("+hour+"deg)";
+        }
+        minutepic.style.transform="rotate("+minute*6+"deg)";
+        secondpic.style.transform="rotate("+second*6+"deg)";
+    }
+
+
+    setTimeout(time,10);
+
+    setInterval(time,1000);
+
+
+
+ </script>
+</body>
+</html>

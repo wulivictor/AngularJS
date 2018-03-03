@@ -1,17 +1,22 @@
 //write by wuli
 window.onload=function () {
-
-    var close_banner = document.getElementById("close-banner");
-    close_banner.onclick = function () {
-        document.getElementById("ad").hidden = true;
-    }
-
-//封装选择器
+    //封装选择器
     function $(id) {
         return document.getElementById(id);
 
     }
 
+
+
+    //轮播图图片
+    var slide_imgs=["images/11.jpg","images/22.jpg","images/33.jpg","images/44.jpg","images/55.jpg","images/66.jpg"];
+    var banner_img = document.getElementById("banner-img");
+    var close_banner = document.getElementById("close-banner");
+    var banner_img_pic=$("banner_img_pic");
+
+    close_banner.onclick = function () {
+        document.getElementById("ad").hidden = true;
+    }
 
 
 
@@ -34,6 +39,7 @@ window.onload=function () {
         }
 
 
+
         //动态生成小圆点
 
         var box=document.getElementById("box");
@@ -43,18 +49,19 @@ window.onload=function () {
          circle.setAttribute("id","circle");
 
     // var ul=document.getElementById("ul").getElementsByTagName("li");
-        for (var i=0;i<6;i++){
+        for (var i=0;i<slide_imgs.length;i++){
             var span=document.createElement("span");
             span.setAttribute("id","click_nmber"+(i+1))
             span.innerHTML=i+1;
             span.setAttribute("class","preCircle")
             circle.appendChild(span);
+            if(i==0){
+                span.setAttribute("class","currentCircle");
+            }
         }
 
 
         //解决左右滑块隐藏
-
-        var banner_img = document.getElementById("banner-img");
         var arrow = document.getElementById("arrow");
 
         banner_img.onmouseover=function () {
@@ -62,43 +69,61 @@ window.onload=function () {
         }
         banner_img.onmouseout=function () {
             arrow.style.display="none";
-
         }
 
-        // var a=1
-        // click_nmber1.style.backgroundColor="#b61b1f";
-        // //设置轮播切换图
-        //
-        // function slideimg() {
-        //     var img_arr=["images/slider1.jpg","images/22.jpg","images/33.jpg","images/44.jpg","images/55.jpg","images/66.jpg"];
-        //     banner_img_pic.src=img_arr[a%6];
-        //     var click_nmber = document.getElementById("click_nmber"+a%7+"");
-        //     a++;
-        //
-        // }
-        // window.setInterval(slideimg,3000);
-        //悬浮小圆点切换图片
-        function  slidepic(number) {
 
-            var click_nmber = document.getElementById("click_nmber"+number);
-            click_nmber.onmousemove=function () {
-                banner_img_pic.src = "images/"+number+number+".jpg";
-                debugger;
-                var prespan=document.getElementsByClassName("currentCircle")[0];
-                    if(prespan!=undefined){
-                        prespan.className="preCircle";
-                    }
-                click_nmber.className="currentCircle";
-
+        //去掉当前小圆点
+        function clearcurrentCircle() {
+            var prespan=document.getElementsByClassName("currentCircle")[0];
+            if(prespan!=undefined){
+                prespan.className="preCircle";
             }
-
         }
-        slidepic(1);
-        slidepic(2);
-        slidepic(3);
-        slidepic(4);
-        slidepic(5);
-        slidepic(6);
+
+
+    //每隔一段时间切换轮播图
+    var time=1;
+    var circlespan=function () {
+            debugger
+            time=time%6;
+            banner_img_pic.src=slide_imgs[time];
+            //跟踪小圆点
+            clearcurrentCircle();
+            var circle=time+1;
+            if(time==0){
+                circle=1;
+            }
+            var click_nmber = $("click_nmber"+(circle));
+            click_nmber.className="currentCircle";
+            time++;
+    };
+   var interval= window.setInterval(circlespan,2500);
+
+
+    //滑过切换轮播图
+    function  slidepic(number) {
+
+        var click_nmber = document.getElementById("click_nmber"+number);
+        click_nmber.onmousemove=function () {
+            window.clearInterval(interval);
+            banner_img_pic.src = "images/"+number+number+".jpg";
+            debugger;
+            clearcurrentCircle();
+            click_nmber.className="currentCircle";
+        };
+        click_nmber.onmouseout=function () {
+
+            interval= window.setInterval(circlespan,2500);
+        }
+
+    }
+    slidepic(1);
+    slidepic(2);
+    slidepic(3);
+    slidepic(4);
+    slidepic(5);
+    slidepic(6);
+
 
     }
 
