@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动图片</title>
+</head>
+<style>
+    .slidepic{
+        width: 512px;
+        height: 385px;
+        margin: 100px auto;
+        overflow: hidden;
+    }
+
+
+
+</style>
+<body>
+
+
+<div class="slidepic">
+    <img src="../images/mi.png" id="mi">
+</div>
+<script>
+        debugger
+        var width=document.getElementById("mi").width;
+        var height=document.getElementById("mi").height;
+        var mi=document.getElementById("mi");
+
+        var slidefun
+        //1085
+
+    var i=0
+    function slide() {
+        debugger;
+         i=i-3;
+         if((-i)>=1085){
+             clearInterval(slidefun)
+             return
+         }
+        mi.style.marginTop=i+"px";
+    }
+
+        mi.onmouseover=function () {
+             slidefun=setInterval(slide,100);
+     }
+
+     mi.onmouseout=function () {
+         clearInterval(slidefun)
+
+
+     }
+
+</script>
+</body>
+</html>
