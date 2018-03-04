@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>advertise</title>
+</head>
+
+<style>
+#left{
+    float: left;
+}
+    #right{
+        float: right;
+    }
+
+
+
+</style>
+<body>
+<img src="images/1.gif" id="left" >
+<img src="images/2.gif" id="right">
+
+<script>
+    var left=document.getElementById("left");
+    var right=document.getElementById("right");
+
+
+    left.onclick=function () {
+        this.style.display="none";
+
+
+    }
+    right.onclick=function () {
+        this.style.display="none";
+
+
+    }
+    var time=5;
+   function  fade() {
+       debugger;
+        time--;
+        if(time==0){
+            left.style.display="none";
+            right.style.display="none";
+
+        }
+
+   }
+    setInterval(fade,1000);
+
+
+</script>
+</body>
+</html>

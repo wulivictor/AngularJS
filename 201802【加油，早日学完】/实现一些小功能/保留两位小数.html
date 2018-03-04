@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>保留两位小数</title>
+</head>
+<body>
+   处理前： <input type="text" id="number"><br/>
+   <button id="change">转换</button>
+   结果：<div id="result"></div>
+    <script>
+        document.getElementById("change").onclick=function () {
+
+debugger
+            var number=document.getElementById("number").value;
+
+
+            var result= number.substr(0,number.indexOf(".")+3);
+
+            var resultdiv=document.getElementById("result");
+            resultdiv.innerHTML=result;
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
