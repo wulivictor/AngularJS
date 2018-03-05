@@ -14,6 +14,7 @@
             background-color: pink;
             position: relative;
             overflow: hidden;
+            border: 5px solid gray;
         }
         .box ul li {
             float: left;
@@ -39,35 +40,38 @@
 </div>
 </body>
 <script>
-    var  scrollbox=document.getElementById("scroll");
-    var ul=scrollbox.getElementsByTagName("ul")[0];
-    var speed=10;
-    var time=100;
-    var i=0;
-    var slidefun;
-    function slide() {
+
+    window.onload=function () {
+
+
+        var slidefun;
+        var  scrollbox=document.getElementById("scroll");
+        var ul=scrollbox.getElementsByTagName("ul")[0];
+        var speed=10;
+        var time=100;
+        var i=0;
+        function slide() {
             i=i-speed;
-        ul.style.left=i+"px";
-        if (i==(-1200)){
-            i=0;
+            ul.style.left=i+"px";
+            if (i==(-1200)){
+                i=0;
+            }
         }
-    }
 
 
-    ul.onmousemove=function () {
-        slidefun=setInterval(slide,time);
-    }
+            slidefun=setInterval(slide,time);
 
 
-    ul.onmouseout=function () {
+        scrollbox.onmouseout=function () {
+            slidefun=setInterval(slide,time);        }
 
+
+        scrollbox.onmousemove=function () {
             clearInterval(slidefun);
+        }
 
 
     }
-
-
-
 
 
 </script>
