@@ -70,10 +70,11 @@
 
         if(hour>12){
             hour=hour-12;
-            hour=hour+minute/60;
-            hour=hour*30;
-            hourpic.style.transform="rotate("+hour+"deg)";
+
         }
+        hour=hour+minute/60;
+        hour=hour*30;
+        hourpic.style.transform="rotate("+hour+"deg)";
         minutepic.style.transform="rotate("+minute*6+"deg)";
         secondpic.style.transform="rotate("+second*6+"deg)";
     }

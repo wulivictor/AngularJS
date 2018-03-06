@@ -190,7 +190,7 @@ div.special{
 
     font: 400 12px/45px "微软雅黑";
 }
-.box4 .a1{
+.box4 a{
     display: block;
     width: 60.5px;
     height: 65.5px;
@@ -199,8 +199,12 @@ div.special{
     text-align: center;
 }
 
+.box4 a:hover{
+    background-color: #cfcfcd;
+}
 
-.box4 .icon1{
+
+.box4 .icon{
     display: block;
     width: 26px;
     height: 26px;
@@ -212,269 +216,13 @@ div.special{
 
 
 }
-.box4 .a1:hover{
-
-}
-
-.box4 .a2{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
 
 
-.box4 .icon2{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -24px;
-    margin-top: 5px;
-
-}
-.box4 .a2:hover{
-
-}
 
 
-.box4 .a3{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-.box4 .icon3{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -50px;
-    margin-top: 5px;
-
-}
 
 
-.box4 .a4{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-.box4 .icon4{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -73px;
-    margin-top: 5px;
 
-}
-.box4 .a4:hover{
-
-}
-
-.box4 .a5{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-
-
-.box4 .icon5{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -98px;
-    margin-top: 5px;
-
-}
-.box4 .a5:hover{
-
-}
-
-.box4 .a6{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-
-
-.box4 .icon6{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -122px;
-    margin-top: 5px;
-
-}
-.box4 .a6:hover{
-
-
-}
-
-.box4 .a7{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-
-
-.box4 .icon7{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -149px;
-    margin-top: 5px;
-
-}
-.box4 .a7:hover{
-
-}
-
-.box4 .a8{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-
-
-.box4 .icon8{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -174px;
-    margin-top: 5px;
-
-}
-.box4 .a8:hover{
-
-}
-
-.box4 .a9{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-
-
-.box4 .icon9{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -199px;
-    margin-top: 5px;
-
-}
-.box4 .a9:hover{
-
-}
-
-.box4 .a10{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-
-
-.box4 .icon10{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -225px;
-    margin-top: 5px;
-
-}
-.box4 .a10:hover{
-
-}
-
-.box4 .a11{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-
-
-.box4 .icon11{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -248px;
-    margin-top: 5px;
-
-}
-.box4 .a11:hover{
-
-}
-
-.box4 .a12{
-    display: block;
-    width: 60.5px;
-    height: 65.5px;
-    float: left;
-    border: 1px solid #e4e4e4;
-    text-align: center;
-}
-
-
-.box4 .icon12{
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 0 auto;
-    background: url("../images/icon_lifeserv.png") no-repeat;
-    background-position: -24px -272px;
-    margin-top: 5px;
-
-}
-.box4 .a12:hover{
-
-}
 
 
 
@@ -513,4 +261,19 @@ div.special{
     background-color: rgb(182,27,31);
     color: #ffffff;
 
+}
+#banner-img{
+    position: relative;
+    overflow: hidden;
+}
+
+#banner-img ul{
+    position: absolute;
+
+    width: 10000px;
+    height: 454px;
+}
+
+#banner-img ul li{
+    float: left;
 }
