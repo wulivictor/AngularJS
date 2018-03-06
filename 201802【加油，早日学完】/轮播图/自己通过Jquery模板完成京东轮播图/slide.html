@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://www.jq22.com/demo/unslider-150203225543/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<title>京东轮播</title>
+
+<script src="jquery-1.11.1.min.js"></script>
+
+<script src="unslider.min.js"></script>
+
+<style>
+
+html, body { font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;}
+
+ul, ol { padding: 0;}
+
+.banner { position: relative; overflow: auto; text-align: center;}
+
+.banner li { list-style: none; }
+
+.banner ul li { float: left; }
+
+#b04 { width: 730px;}
+
+#b04 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+
+#b04 .dots li
+
+{
+    display: inline-block;
+
+    width: 10px;
+
+    height: 10px;
+
+    margin: 0 4px;
+
+    text-indent: -999em;
+
+    border: 2px solid #fff;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    opacity: .4;
+
+    -webkit-transition: background .5s, opacity .5s;
+
+    -moz-transition: background .5s, opacity .5s;
+
+    transition: background .5s, opacity .5s;
+
+}
+
+#b04 .dots li.active
+
+{
+
+    background: #fff;
+
+    opacity: 1;
+
+}
+
+
+.arrow{
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    width: 100%;
+
+}
+.arrow a:hover{
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+
+}
+
+
+.prev{
+    display: block;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+
+
+.next{
+    display: block;
+    right: 0;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="banner has-dots" id="b04" style="overflow: hidden; width: 640px; height: 484px;">
+
+
+
+
+    <ul style="width: 500%; position: relative; left: 0%; height: 480px; width：730px">
+
+        <li><img src="./11.jpg" alt=""></li>
+
+        <li><img src="./22.jpg" alt="" ></li>
+
+        <li><img src="./33.jpg" alt="" ></li>
+
+        <li><img src="./44.jpg" alt="" ></li>
+
+        <li><img src="./55.jpg" alt="" ></li>
+
+        <li><img src="./66.jpg" alt="" ></li>
+
+    </ul>
+    <div class="arrow" id="arrow">
+
+    <a href="javascript:void(0);" class="unslider-arrow04 prev" ><</a>
+
+    <a href="javascript:void(0);"  class="unslider-arrow04 next">></a>
+    </div>
+
+<ol class="dots"><li class="dot active">1</li><li class="dot">2</li><li class="dot">3</li><li class="dot">4</li><li class="dot">5</li><li class="dot">6</li></ol>
+
+
+
+
+</div>
+
+
+
+<script>
+
+window.onload=function(){
+
+
+var unslider04 = $('#b04').unslider({
+
+		dots: true
+
+	}),
+
+	data04 = unslider04.data('unslider');
+
+
+
+	$('.unslider-arrow04').click(function() {
+	    debugger
+
+        var fn = this.className.split(' ')[1];
+
+        data04[fn]();
+
+    })
+
+
+}
+</script>
+
+
+</body></html>

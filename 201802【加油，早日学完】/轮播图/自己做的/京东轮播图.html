@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin:0;padding:0;}
+        ul{list-style:none;}
+        img {vertical-align: top; }  /*取消图片底部3像素距离*/
+        .box {
+            width: 730px;
+            height: 454px;
+            margin: 50px auto;
+            background-color: pink;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #FFFFFF;
+        }
+        .box ul li {
+            float: left;
+        }
+        .box ul {
+            width:1000%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="scroll">
+    <ul>
+        <li><img src="../../images/11.jpg" alt=""/></li>
+        <li><img src="../../images/22.jpg" alt=""/></li>
+        <li><img src="../../images/33.jpg" alt=""/></li>
+        <li><img src="../../images/44.jpg" alt=""/></li>
+        <li><img src="../../images/55.jpg" alt=""/></li>
+        <li><img src="../../images/66.jpg" alt=""/></li>
+        <li><img src="../../images/11.jpg" alt=""/></li>
+
+    </ul>
+</div>
+
+
+<button id="left">上一张</button>
+<button id="right">下一张</button>
+
+
+</body>
+<script>
+    var width=730;
+    var target=730;
+    var nowpoint=0;
+    var ul= document.getElementById("scroll").getElementsByTagName("ul")[0];
+    var timefun;
+    var flag=false;
+    var i=1;
+
+
+
+
+    function slideright() {
+        if (flag){
+            debugger
+            timefun;
+            target=width*i;
+            flag=false;
+        }
+
+
+        if (target>4379){
+
+             target=730;
+             nowpoint=0;
+             i=1;
+
+        }
+
+        ul.style.left= -nowpoint+"px";
+        nowpoint=nowpoint+(target-nowpoint)/10;
+        if ((nowpoint+0.1)>target){
+            clearInterval(timefun);
+            flag=true;
+            i++
+        }
+        console.log(timefun);
+    }
+
+
+
+
+
+
+
+
+
+
+
+    document.getElementById("right").onclick=function () {
+            timefun=setInterval(slideright,20);
+
+
+    }
+
+
+
+    document.getElementById("left").onclick=function () {
+        timefun=setInterval(slideleft,20);
+
+
+    }
+
+
+
+    function slideleft() {
+        if (flag){
+            debugger
+            timefun;
+            target=width*i;
+            flag=false;
+        }
+
+
+        if (target>4379){
+
+            target=730;
+            nowpoint=0;
+            i=1;
+
+        }
+
+        ul.style.left= -nowpoint+"px";
+        nowpoint=nowpoint+(target-nowpoint)/10;
+        if ((nowpoint+0.1)>target){
+            clearInterval(timefun);
+            flag=true;
+            i++
+        }
+        console.log(timefun);
+    }
+
+
+
+
+
+
+</script>
+</html>

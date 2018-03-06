@@ -4,12 +4,27 @@
 
 //初始化调用
 window.onload=function () {
+
+    //轮播图部分
+    var unslider04 = $('#banner-img').unslider({
+            dots: true
+        }),
+        data04 = unslider04.data('unslider');
+    $('.unslider-arrow04').click(function() {
+        var fn = this.className.split(' ')[1];
+        data04[fn]();
+    })
+    //清楚框架生成的多余ol
+    var dots_hidden=document.getElementsByClassName("dots")[1];
+    dots_hidden.style.display="none";
+
+
+
     //定义变量  变量一定要放在初始化函数中执行，才能呗赋值，要不然毫无作用
     slide_imgs=["images/11.jpg","images/22.jpg","images/33.jpg","images/44.jpg","images/55.jpg","images/66.jpg"];
     banner_img = document.getElementById("banner-img");
     close_banner = document.getElementById("close-banner");
     banner_img_pic=$("banner_img_pic");
-
     close_banner.onclick = function () {
         document.getElementById("ad").hidden = true;
     }
@@ -25,7 +40,7 @@ window.onload=function () {
     }
 
     //点击输入框清除文字
-        var myinput=$("jd-input");
+        var myinput=document.getElementById("jd-input");
         myinput.onfocus=function () {
             if(myinput.value=="iPhone8 256G"){
                 myinput.value="";
@@ -62,7 +77,6 @@ window.onload=function () {
 //实现方法
     //创建图标
         function  createcon() {
-            debugger;
            var icon_array=document.getElementById("box4").getElementsByClassName("icon");
             for (var i=0;i<icon_array.length;i++){
                 var Y=-25*i;
@@ -73,22 +87,22 @@ window.onload=function () {
 
     //动态生成小圆点
         function  createCirecle() {
-            var box=document.getElementById("box");
-            var circle=document.createElement("div");
-            box.appendChild(circle);
-            circle.setAttribute("class","circle");
-            circle.setAttribute("id","circle");
-
-            for (var i=0;i<slide_imgs.length;i++){
-                var span=document.createElement("span");
-                span.setAttribute("id","click_nmber"+(i))
-                span.innerHTML=i+1;
-                span.setAttribute("class","preCircle")
-                circle.appendChild(span);
-                if(i==0){
-                    span.setAttribute("class","currentCircle");
-                }
-            }
+            // var box=document.getElementById("box");
+            // var circle=document.createElement("ol");
+            // box.appendChild(circle);
+            // circle.setAttribute("class","dots");
+            // // circle.setAttribute("id","circle");
+            //
+            // for (var i=0;i<slide_imgs.length;i++){
+            //     var span=document.createElement("li");
+            //     // span.setAttribute("id","click_nmber"+(i))
+            //      span.innerHTML=i+1;
+            //     span.setAttribute("class","dot")
+            //     circle.appendChild(span);
+            //     // if(i==0){
+            //     //     span.setAttribute("class","currentCircle");
+            //     // }
+            // }
         }
 
 
