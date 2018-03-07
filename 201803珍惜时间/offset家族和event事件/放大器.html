@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+.div1{
+    display: block;
+    float: left;
+    border: 1px solid yellow;
+    margin-right: 10px;
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.div2{
+    display: block;
+    float: left;
+    border: 1px solid yellow;
+    margin-right: 10px;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+}
+
+
+#mask{
+    width: 100px;
+    height: 100px;
+    background-color:rgba(255, 255, 0, 0.4);
+    position: absolute;
+    top:0;
+    left:0;
+}
+</style>
+<body>
+
+
+
+
+<div class="div1" id="div1">
+    <img src="images/001.jpg" id="img1">
+    <div id="mask"></div>
+</div>
+<div class="div2"><img src="images/0001.jpg" id="img111"></div>
+
+</body>
+</html>
+
+<script>
+
+   var div1= document.getElementById("div1");
+   div1.onmousemove=function (event) {
+            var event=event||window.event;
+            var mousex=event.pageX;
+            var mousey=event.pageY;
+
+
+
+
+
+
+            mask.style.left=mousex+"px";
+            mask.style.top=mousey+"px";
+
+
+
+   }
+
+
+
+
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+
+    *{
+        padding:0;
+        margin: 0;
+    }
+    img{
+        width: 90px;
+        height: 30px;
+        position: absolute;
+    }
+
+
+</style>
+<body>
+
+<img src="https://www.sogou.com/web/index/images/logo_150x58.png" id="img">
+
+<script>
+    var img=document.getElementById("img");
+    var x;
+    var y;
+    var imgx;
+    var imgy;
+    document.onclick=function (event) {
+        debugger
+       var  event=event||window.event;
+       x=event.pageX;
+       y=event.pageY;
+       imgx=img.offsetLeft;
+       imgy=img.offsetTop;
+        setInterval(move,30);
+
+    }
+
+
+    function move() {
+
+        imgx=imgx+(x-imgx)/10;
+        imgy=imgy+(y-imgy)/10;
+        img.style.left=imgx+"px";
+        img.style.top=imgy+"px";
+
+    }
+
+
+</script>
+</body>
+</html>

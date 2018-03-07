@@ -4,7 +4,6 @@
 
 //初始化调用
 window.onload=function () {
-
     //轮播图部分
     var unslider04 = $('#banner-img').unslider({
             dots: true
@@ -18,6 +17,13 @@ window.onload=function () {
     var dots_hidden=document.getElementsByClassName("dots")[1];
     dots_hidden.style.display="none";
 
+    //关掉广告
+    $("close-banner").onclick=function () {
+
+
+        $("ad").style.display="none";
+
+    }
 
 
     //定义变量  变量一定要放在初始化函数中执行，才能呗赋值，要不然毫无作用
@@ -63,9 +69,6 @@ window.onload=function () {
     createcon();
 
     }
-
-
-
 
 
 
@@ -123,8 +126,3 @@ window.onload=function () {
 
         }
 
-//封装选择器
-function $(id) {
-    return document.getElementById(id);
-
-}

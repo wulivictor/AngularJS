@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>offset宽高</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .box{
+
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+        padding: 3px;
+        border:1px solid salmon;
+        position: inherit;
+        display: inline-block;
+    }
+
+    .son{
+
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        padding: 3px;
+        border:1px solid blueviolet;
+
+    }
+
+</style>
+<body>
+</body>
+</html>
+<script>
+//    window.getSelection?window.getSelection().removeAllRanges():document.selection.empty();
+    var body=document.getElementsByTagName("body")[0];
+    var div=document.createElement("div");
+    div.innerHTML="我是一个小盒子";
+    div.setAttribute("class","box");
+    body.appendChild(div);
+    console.log("box宽"+document.getElementsByClassName("box")[0].offsetWidth);
+    console.log("box高"+document.getElementsByClassName("box")[0].offsetHeight);
+    var sondiv=document.createElement("div");
+        sondiv.innerHTML="";
+        div.appendChild(sondiv);
+        sondiv.setAttribute("class","son");
+    console.log("son距离父级的上边"+document.getElementsByClassName("son")[0].offsetTop);
+    console.log("son距离父级的左边"+document.getElementsByClassName("son")[0].offsetLeft);
+
+    sondiv.onclick=function (event) {
+    var event=event||window.event;
+
+//        console.log("鼠标在当前屏幕的X坐标值"+event.screenX);
+//        console.log("鼠标在当前屏幕的Y坐标值"+event.screenY);
+//        console.log("鼠标在当前页的X坐标值"+event.pageX);
+//        console.log("鼠标在当前页的Y坐标值"+event.pageY);
+//        console.log("鼠标在客户端的X坐标值"+event.clientX);
+//        console.log("鼠标在客户端的Y坐标值"+event.clientY);
+
+    }
+
+    sondiv.onmousedown=function () {
+       var  flag=true;
+        console.log(event.type);
+        document.onmousemove=function (event) {
+//            console.log(event)
+            sondiv.onmouseup=function () {
+                console.log("松手，操作停止");
+                flag=false;
+                console.log(event.type);
+                return;
+            }
+
+            if(flag){
+                var event=event||window.event;
+                sondiv.style.cursor="move";
+                var x=event.pageX;
+                var y=event.pageY;
+//                console.log("鼠标在当前页的X坐标值"+x);
+//                console.log("鼠标在当前页的Y坐标值"+y);
+//                console.log(event.target);
+                //判断事件的函数
+                console.log(event.type);
+                sondiv.style.position="absolute";
+                sondiv.style.left=x+"px";
+                sondiv.style.top=y+"px";
+            }
+         }
+    }
+
+</script>
