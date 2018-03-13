@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function  fun() {
+        var num=10;
+        function getnum(){
+            console.log(num)
+        }
+
+
+        return getnum;  //要返回一个函数体，不能加括号，加括号就会执行
+    }
+
+
+
+    var demo =fun();  //因为返回的是函数体，所以demo是函数
+    demo();
+
+</script>
+</body>
+</html>

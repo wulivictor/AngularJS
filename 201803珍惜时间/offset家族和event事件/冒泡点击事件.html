@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+
+
+</style>
+<body>
+
+
+<div></div>
+</body>
+</html>
+
+<script>
+document.getElementsByTagName("div")[0].onclick=function () {
+
+    alert("现在元素"+this.tagName);
+}
+document.getElementsByTagName("body")[0].onclick=function () {
+
+    alert("现在元素"+this.tagName);
+}
+</script>

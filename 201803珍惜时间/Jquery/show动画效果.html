@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+    <style>
+        div{
+            background-color: red;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">我是按钮</button>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+</body>
+</html>
+<script src="js/jquery-2.1.4.js"></script>
+
+<script>
+window.onload=function (ev) {
+
+    alert("onload");
+}
+
+$(document).ready(function () {
+    alert("ready");
+})
+</script>

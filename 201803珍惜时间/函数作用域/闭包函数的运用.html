@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包函数的应用</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        background-color: yellow;
+
+    }
+
+
+</style>
+<body>
+
+
+<button id="btn1">向左移</button>
+<button id="btn2">向右移</button>
+
+<div id="box"></div>
+
+
+
+
+</body>
+</html>
+
+<script>
+var btn1=document.getElementById("btn1");
+var btn2=document.getElementById("btn2");
+var box=document.getElementById("box");
+
+function  move (speed) {
+    return function () {
+        box.style.left=box.offsetLeft+speed+"px";
+    }
+}
+
+btn1.onclick=move(-5);
+btn2.onclick=move(5);
+
+var json={"a":"b"}
+
+
+</script>
