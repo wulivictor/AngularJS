@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab页</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .clear{
+            clear: both;
+        }
+        .tab{
+            width: 1000px;
+            margin: 50px auto;
+
+        }
+        ul{
+            list-style: none;
+            overflow: hidden;
+        }
+        ul li{
+            position: relative;
+            float: left;
+            padding: 0 10px;
+            font: 500 18px/36px "sans-serif";
+            cursor: pointer;
+            padding-top: 2px;
+            background-color: #eef6ff;
+        }
+        ul span{
+            border-left: 1px solid #ddd;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -9px;
+            width: 0;
+            overflow: hidden;
+            height: 18px;
+        }
+
+        .li_active{
+            position: relative;
+            float: left;
+            padding: 0 10px;
+            font: 500 18px/36px "sans-serif";
+            border-top:2px solid red ;
+            background:#f7ff67
+        }
+        .tab div{
+            display: none;
+        }
+
+        .tab div.div_active{
+            display: block;
+        }
+
+    </style>
+</head>
+<script src="js/jquery-2.1.4.js"></script>
+<body>
+<div class="tab">
+    <ul>
+        <li class="li_active">国际大牌
+            <span>#</span>
+        </li>
+        <li>国际名装
+            <span>#</span>
+        </li>
+        <li>清洁用品
+            <span>#</span>
+        </li>
+        <li>男士精品</li>
+    </ul>
+
+
+<div class="div_active">
+    <img src="image/1.jpg">
+</div>
+<div>
+    <img src="image/2.jpg">
+
+</div>
+<div>
+    <img src="image/3.jpg">
+
+</div>
+<div>
+    <img src="image/4.jpg">
+
+</div>
+</div>
+</body>
+</html>
+<script>
+$("li").click(function () {
+    var $this=$(this);
+    $("li").eq($this.index()).addClass("li_active").siblings().removeClass("li_active");
+    $(".tab div").eq($this.index()).addClass("div_active").siblings().removeClass("div_active");
+})
+</script>

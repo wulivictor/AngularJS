@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>360导航栏效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 736px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            padding: 3px;
+        }
+
+        ul li {
+
+            float: left;
+            margin: 3px 3px 0px 3px;
+            position: relative;
+        }
+
+        body {
+            background: url("image/01/bg.jpg") no-repeat;
+            background-position: top left;
+            /*opacity: 0.8;*/
+        }
+        ul li p{
+            display: none;
+            width: 178px;
+            height: 16px;
+            font: 400 12px/16px "sans-serif";
+            text-align: center;
+            vertical-align: center;
+        }
+
+        a{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        .mask{
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            width: 178px;
+            height: 20px;
+            z-index: 1;
+            bottom: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<script src="js/jquery-2.1.4.js"></script>
+<body>
+<div class="safari">
+    <ul>
+        <li><a href="javascript:;"> <img src="image/01/01.JPG">
+            <p>百度一下，你就知道</p></a></li>
+        <li><a href="javascript:;"> <img src="image/01/02.JPG">
+            <p>淘宝-双十一打折</p></a></li>
+        <li><a href="javascript:;"> <img src="image/01/03.JPG">
+            <p>新浪-看新闻就用新浪</p></a></li>
+        <li><a href="javascript:;"> <img src="image/01/04.JPG">
+            <p>网易-网易新闻</p></a></li>
+        <li><a href="javascript:;"> <img src="image/01/05.JPG">
+            <p>搜狐-有态度的门户</p></a></li>
+        <li><a href="javascript:;"> <img src="image/01/06.JPG">
+            <p>腾讯-我爱微信</p></a></li>
+        <li><a href="javascript:;"> <img src="image/01/07.JPG">
+            <p>优酷，全世界都在看</p></a></li>
+        <li><a href="javascript:;"> <img src="image/01/08.JPG">
+            <p>京东，拒接假货</p></a></li>
+        <div style="clear:both;"></div>
+    </ul>
+
+</div>
+</body>
+</html>
+<script>
+    $("ul li").mouseenter(function () {
+        var $this = $(this);
+        var index = $this.index();
+        $("ul li p").eq(index).parent().stop();
+        if($("ul li p").eq(index).parent().attr("class")!="mask"){
+            $("ul li p").
+            eq(index).
+            wrap("<div class='mask'></div>")
+                .css({
+                    "background":"url(image/01/bg.png) no-repeat",
+                    "backgroundPositionX":"5px",
+                    "backgroundPositionY":(-25*index-4)+"px",
+                    "display":"block",
+                    "opacity":1,
+                });
+        }
+        $("ul li p").eq(index).parent().slideDown();
+    });
+    $("ul li").mouseleave(function () {
+        var $this = $(this);
+        var index = $this.index();
+        $("ul li p").eq(index).parent().stop();
+        $("ul li p").eq(index).parent().slideUp();
+    });
+</script>

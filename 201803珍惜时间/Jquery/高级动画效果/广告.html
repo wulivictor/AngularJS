@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ad</title>
+    <style>
+        div{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: none;
+        }
+        s{
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<script src="../js/jquery-2.1.4.js"></script>
+<script>
+    $(document).ready(function () {
+        $("div").slideDown(2000).slideUp(2000).fadeIn(2000);
+        $("s").click(function () {
+            $(this).parent().hide();
+        });
+
+        $("button").click(function () {
+            $("div").stop(false,true);
+
+        });
+    })
+</script>
+<body>
+<button>快速执行</button>
+<div><img src="image/ad.jpg">
+    <s><img src="image/h.jpg"></s>
+</div>
+</body>
+</html>
