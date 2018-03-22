@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websql</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+
+    var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+    db.transaction(function (tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS USER (id unique, name)');
+        tx.executeSql('INSERT INTO USER (id,name) VALUES (?, ?)', ['001', 'wuli']);
+    });
+
+    //查询数据库
+    db.transaction(function(tx) {
+        tx.executeSql("SELECT * FROM USER", [],
+            function(tx, result) {
+                for(var i = 0; i < result.rows.length; i++){
+                    document.write('<b>' + result.rows.item(i)['name'] + '</b><br />');
+                }
+            }, function(){
+                alert("error");
+            });
+    });
+</script>
