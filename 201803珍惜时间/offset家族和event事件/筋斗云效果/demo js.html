@@ -67,12 +67,14 @@
         lis[i].onmouseover = function() {
             // alert(this.offsetLeft);
             target = this.offsetLeft;  // 把左侧的位置 ，给 target
+
         }
         lis[i].onmouseout = function() {
             target = current;     // 鼠标离开  target 是 刚才我们点击的位置
         }
         lis[i].onclick = function() {
            current = this.offsetLeft;   //  点击的时候 吧当前位置 存贮一下
+
         }
     }
     // 缓动公式
@@ -82,3 +84,4 @@
         cloud.style.left = leader + "px";
     },10);
 </script>
+

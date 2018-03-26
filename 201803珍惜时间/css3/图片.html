@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+
+            padding: 0;
+            margin: 0;
+        }
+
+        div{
+            margin: 100px auto;
+            height: 200px;
+            width: 200px;
+            background: url("../images/timg.jpg") no-repeat;
+            display: block;
+            transform: rotate(0deg);
+            border: 1px dashed #CCC;
+            transform-origin: center center;
+            background-size:100% ;
+            box-sizing: border-box;
+            border-radius: 50%;
+            animation:zhuandao 5s linear infinite;
+        }
+        @keyframes zhuandao {
+            0%{
+            transform: rotate(0deg);
+
+        }
+        100%{
+            transform: rotate(360deg);
+
+        }
+            
+        }
+
+
+
+        header{
+            margin-bottom: -90px;
+        font: 22px/36px "simsum";
+        text-align: center;
+
+        }
+
+    </style>
+</head>
+<body>
+<header>试听专辑</header>
+<div></div>
+</body>
+</html>

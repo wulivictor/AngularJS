@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多列布局</title>
+</head>
+<style>
+    header{
+        font:500 22px/48px "simsum";
+        text-align: left;
+        background-color: #CCC;
+        text-indent: 2em;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        margin: 0 auto;
+        width: 800px;
+    }
+    .paper{
+        width: 800px;
+        box-shadow: 3px 3px 5px #CCC;
+        box-sizing: border-box;
+        -webkit-column-count: 2;
+        -webkit-column-gap:40px;
+        -webkit-column-rule:2px dashed #CCC ;
+
+
+        padding: 20px;
+
+
+    }
+
+</style>
+<body>
+
+<div>
+    <header>人脸大数据算法</header>
+
+    <section class="paper">
+        <p>视频侦查平台借助计算机图像处理和视频智能分析算法，从蕴含海量信息的各种视频图像中快速实现有效信息的提取，用于辅助研判案情、发现犯罪线索。
+            视频侦查平台通过对接PGIS，天网平台和公安内网警综系统，可以快速导入警综案件，并通过以案发地为起点，在地图上搜索附近点位，通过视频智能化分析，将附近监控点位中出现的目标进行结构化分离：人、车、骑行目标。通过以图搜图对嫌疑人进行排查，刻画嫌疑人在地图上的行动轨迹，最后将线索、案件信息归档。
+        </p>
+        <p>人脸识别考勤系统：采用了商汤人脸识别算法，利用人脸的差异识别人员。通过提取人像特征点，利用生物统计学的原理建立人脸特征模板对人员的考勤做出记录，识别人脸的准确度极高，并且可以随时导出员工的考勤记录，节省人力、提高办公效率。</p>
+    </section>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
