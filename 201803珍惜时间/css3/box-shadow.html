@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-shadow</title>
+</head>
+<style>
+
+   *{
+       padding: 0;
+       margin: 0;
+   }
+
+    div.a{
+        width: 0;
+        height: 0;
+
+        border-top: 8px solid transparent;
+        border-right: 20px solid #ff701d;
+        border-bottom: 8px solid transparent;
+        border-radius:3%;
+        float: left;
+        margin-top: 17px;
+
+    }
+
+
+    div.b{
+        width: 300px;
+        height: 50px;
+        background: #ff701d;
+        box-shadow: 3px 3px 5px #856404;
+        border-radius: 3%;
+        float: left;
+        font: 400 35px/50px "微软雅黑";
+        color: yellow;
+        text-align: center;
+        padding: 50px;
+
+
+        border: 3px dashed red;
+
+        background-image: url("../images/001.jpg");
+        background-origin:padding-box;
+
+        background-repeat: no-repeat;
+    }
+
+
+</style>
+<body>
+<div class="b">
+
+
+    hello world!
+</div>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.section{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.section:first-child{
+    background-color: #0da5d6;
+}
+.logo{
+    position: absolute;
+    width: 247px;
+    height: 185px;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -123px;
+    background: url("../images/p1.png");
+    background-position: -256px 0;
+}
+
+.section:first-child .text{
+    position: absolute;
+    top: 50%;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.section:first-child span:nth-child(1) {
+    background-position: -7px -208px;
+    width: 63px;
+    height: 83px;
+}
+
+.section:first-child span:nth-child(2) {
+    background-position: -76px -205px;
+    width: 91px;
+    height: 90px;
+}
+
+.section:first-child span:nth-child(3) {
+    background-position: -181px -209px;
+    width: 82px;
+    height: 85px;
+}
+
+.section:first-child span:nth-child(4) {
+    background-position: -277px -204px;
+    width: 90px;
+    height: 91px;
+}
+
+.section:first-child span:nth-child(5) {
+    background-position: -376px -205px;
+    width: 92px;
+    height: 90px;
+}
+
+.section:first-child span:nth-child(6) {
+    background-position: -481px -209px;
+    width: 82px;
+    height: 85px;
+}
+
+.section:first-child span:nth-child(7) {
+    background-position: -576px -205px;
+    width: 92px;
+    height: 90px;
+}
+
+.section:first-child span:nth-child(8) {
+    background-position: -677px -204px;
+    width: 91px;
+    height: 91px;
+}
+
+.feature{
+    width: 772px;
+    height: 49px;
+    background: url("../images/p1.png");
+    background-position: -0px 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 158px 0 0 -385px;
+    /*border: 1px solid rebeccapurple;*/
+}
+
+
+/*第一屏动画起始状态*/
+.section:first-child span {
+    display: inline-block;
+    margin: 0 40px;
+    opacity: 0;
+    background-image: url(../images/p1.png);
+}
+
+/*第一屏动画终止状态*/
+.current.section:first-child span {
+    opacity: 1;
+    margin: 0 7px;
+    transition: all 1s ease-out 0.3s;
+}
+
+
+.section:nth-child(2){
+    background-color: #2AB561;
+
+}
+
+.section:nth-child(2) .security{
+    position: absolute;
+    width: 635px;
+    height: 309px;
+    top: 50%;
+    left:  50%;
+    margin: -163px 0 0 -73px;
+    background-image: url("../images/p2.png");
+    background-position: 0px 0px;
+    /*border: 1px solid rebeccapurple;*/
+
+
+}
+
+.shield{
+    width: 408px;
+    height: 483px;
+    margin: -241px 0 0 -550px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 0;
+    border: 1px solid  red;
+}
+
+
+<!-- 第二屏的9个span -->
+
+
+
+ .section:nth-child(2) span:nth-child(1) {
+     width: 111px;
+     height: 121px;
+     background-position: -10px -34px;
+     top: 28px;
+     transform: translate(460%, -128%) rotate(80deg);
+ }
+
+.section:nth-child(2) span:nth-child(2) {
+    width: 176px;
+    height: 149px;
+    background-position: -123px -6px;
+    left: 113px;
+    transform: translate(65%, 279%) rotate(145deg);
+}
+
+.section:nth-child(2) span:nth-child(3) {
+    width: 117px;
+    height: 121px;
+    background-position: -301px -34px;
+    left: 291px;
+    top: 28px;
+    transform: translate(400%, 380%) rotate(70deg);
+}
+
+.section:nth-child(2) span:nth-child(4) {
+    width: 106px;
+    height: 176px;
+    background-position: -15px -157px;
+    top: 151px;
+    left: 5px;
+    transform: translate(500%, 29%) rotate(110deg);
+}
+
+.section:nth-child(2) span:nth-child(5) {
+    width: 176px;
+    height: 176px;
+    background-position: -123px -157px;
+    top: 151px;
+    left: 113px;
+    transform: translate(472%, 73%) rotate(60deg);
+}
+
+.section:nth-child(2) span:nth-child(6) {
+    width: 111px;
+    height: 176px;
+    background-position: -301px -157px;
+    top: 151px;
+    left: 291px;
+    transform: translate(195%, 136%) rotate(90deg);
+}
+
+.section:nth-child(2) span:nth-child(7) {
+    width: 80px;
+    height: 100px;
+    background-position: -41px -335px;
+    top: 329px;
+    left: 31px;
+    transform: translate(-31%, -106%) rotate(282deg);
+}
+
+.section:nth-child(2) span:nth-child(8) {
+    width: 176px;
+    height: 153px;
+    background-position: -123px -335px;
+    top: 329px;
+    left: 113px;
+    transform: translate(47%, -157%) rotate(80deg);
+}
+
+.section:nth-child(2) span:nth-child(9) {
+    width: 83px;
+    height: 102px;
+    background-position: -301px -335px;
+    top: 329px;
+    left: 291px;
+    transform: translate(-320%, -410%) rotate(120deg);
+}
+
