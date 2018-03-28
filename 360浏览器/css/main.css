@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *{
     padding: 0;
     margin: 0;
@@ -129,27 +130,32 @@
 
 .shield{
     width: 408px;
-    height: 483px;
+    height: 482px;
     margin: -241px 0 0 -550px;
     position: absolute;
     left: 50%;
     top: 50%;
-    font-size: 0;
-    border: 1px solid  red;
+    /*border: 1px solid  red;*/
 }
 
 
-<!-- 第二屏的9个span -->
+.section:nth-child(2) span{
+    position: absolute;
+    background-image: url("../images/shield.png");
+    display: block;
+
+}
 
 
+/*第二屏的9个span*/
 
- .section:nth-child(2) span:nth-child(1) {
-     width: 111px;
-     height: 121px;
-     background-position: -10px -34px;
-     top: 28px;
-     transform: translate(460%, -128%) rotate(80deg);
- }
+.section:nth-child(2) span:first-child {
+    width: 111px;
+    height: 121px;
+    background-position: -10px -33px;
+    top: 27px;
+    transform: translate(665%, 189%) rotate(195deg);
+}
 
 .section:nth-child(2) span:nth-child(2) {
     width: 176px;
@@ -222,3 +228,199 @@
     transform: translate(-320%, -410%) rotate(120deg);
 }
 
+
+.current.section:nth-child(2) span{
+    transform: translate(0,0) rotate(0deg);
+    transition: all 1.5s 0.3s ease-in-out;
+
+
+}
+
+.section:nth-child(3){
+    background-color: #DE8910;
+}
+
+.speed{
+    position: absolute;
+    width: 631px;
+    height: 273px;
+    background: url("../images/p3.png");
+    background-position:0px 760px;
+    top: 50%;
+    left: 50%;
+    margin-top: -143px;
+    margin-left: -612px;
+}
+
+.section:nth-child(3) .rocket{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: 105px;
+
+}
+
+
+.section:nth-child(3) .rocket div:nth-child(1) {
+    width: 450px;
+    height: 450px;
+    background-image: url("../images/p3.png");
+    position: absolute;
+    background-position: 0 450px;
+    transform: rotate(35deg);
+
+}
+.section:nth-child(3) .rocket div:nth-child(2) {
+    width: 403px;
+    height: 416px;
+    background-image: url("../images/p3.png");
+    position: absolute;
+    background-position: 400px 450px;
+    top: 4px;
+    left: 21px;
+    transform: rotate(22deg);
+
+}
+.section:nth-child(3) .rocket div:nth-child(3) {
+    width: 420px;
+    height: 420px;
+    background-image: url("../images/p3.png");
+    position: absolute;
+    background-position: 800px 450px;
+    top: 7px;
+    left: 18px;
+    transform: rotate(120deg);
+
+}
+
+
+.section:nth-child(3) .rocket div:nth-child(4) {
+    width: 300px;
+    height: 230px;
+    position: absolute;
+    background-position: -324px 1045px;
+    background-image: url("../images/p3.png");
+    top: 109px;
+    left: 75px;
+    transform: translate(-122%,190%);
+    opacity: 0;
+}
+
+
+
+/*动画停止效果*/
+.current.section:nth-child(3) .rocket div:nth-child(1) {
+
+    transform: rotate(0deg);
+    transition: all 2s 0.3s ease-in-out;
+}
+.current.section:nth-child(3) .rocket div:nth-child(2) {
+    transform: rotate(0deg);
+
+    transition: all 2s 0.3s ease-in-out;
+}
+.current.section:nth-child(3) .rocket div:nth-child(3) {
+    transform: rotate(0deg);
+
+    transition: all 2s 0.3s ease-in-out;
+}
+
+.current.section:nth-child(3) .rocket div:nth-child(4) {
+    opacity: 1;
+
+    transform: translate(-0%,0%);
+    transition: all 1.5s  ease-in-out;
+}
+
+
+.section:nth-child(4) {
+   background-color: #16BA9D;
+}
+
+
+.section:nth-child(4) .text{
+    width: 611px;
+    height: 295px;
+    background-image: url("../images/p4.png");
+    background-position: -566px 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -143px;
+
+}
+.search{
+    width: 529px;
+    height: 67px;
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    margin-top:-150px;
+    background-image: url("../images/p4.png");
+    background-position: 0px 0px;
+    opacity: 0;
+}
+
+.section:nth-child(4) .key{
+    background: url(../images/p4.png) no-repeat -570px -330px;
+    display: block;
+    height: 20px;
+    width: 0;
+    margin-top: 25px;
+    margin-left: 25px;
+
+}
+
+
+
+.current.section:nth-child(4) .search{
+    left: 90px;
+    opacity: 1;
+    transition: all 1s;
+}
+
+
+
+.current.section:nth-child(4) .key{
+
+    animation: typing steps(5) 2s 1s forwards  ;
+
+
+}
+
+@keyframes typing {
+    0%{
+        width: 0px;
+    }
+
+    100%{
+        width: 90px;
+    }
+}
+
+.wapper{
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -97px;
+    margin-left: 103px;
+    width: 529px;
+    height: 380px;
+}
+
+.tip{
+    position: absolute;
+    top: -100%;
+    width: 529px;
+    height: 380px;
+    background-image: url("../images/p4.png");
+    background-position: -14px -83px;
+}
+.current.section:nth-child(4) .tip{
+    top: 0%;
+    transition: all 1s linear 3.2s;
+
+}
