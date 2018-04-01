@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <title>360安全浏览器</title>
     <link rel="stylesheet" href="css/main.css">
+
+
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap/lib/respond/respond.min.js"></script>
+
+    <![endif]-->
 </head>
 <body>
+
+
+
+
 <div class="fullpage" id="fullpage">
     <!-- 第一屏-->
     <section class="section">
@@ -62,8 +73,6 @@
             <div></div>
         </div>
 
-
-
     </section>
 
     <!-- 第4屏-->
@@ -87,17 +96,9 @@
     </section>
 
 </div>
-
-
-
-
-
-
-
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
 <script>
-
     $('#fullpage').fullpage({
         css3: true,
         afterLoad: function (anchorLink, index) {
@@ -109,7 +110,6 @@
             }, 100);
         }
     });
-
 </script>
 </body>
 </html>
