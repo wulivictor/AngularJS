@@ -33,7 +33,7 @@
     color: #E9232C;
     display: inline-block;
     font-size: 50px;
-    line-height: 50px;
+    line-height: 72px;
     vertical-align: middle;
 }
 
@@ -45,7 +45,7 @@
     color: #434243;
     display: inline-block;
     font-size: 36px;
-    line-height: 50px;
+    line-height: 72px;
     vertical-align: middle;
 }
 
@@ -124,7 +124,6 @@
 下面写样式
  */
 #header{
-    height: 40px;
     font: 400 12px/40px "微软雅黑";
     color: #777;
 
@@ -185,7 +184,6 @@
 }
 
 #nav .container,#nav li a,#nav .navbar-right{
-    height: 72px;
     font-size: 14px;
     line-height: 72px;
     vertical-align: middle;
@@ -194,7 +192,12 @@
     color: #878787;
     background-color: transparent;
     border: none;
-
+}
+.navbar-right{
+    margin-bottom:0 ;
+}
+.navbar{
+    margin-bottom:0 ;
 
 }
 
@@ -210,3 +213,43 @@
 }
 
 
+/**
+第二个区域 轮播图
+ */
+
+#myCarousel .carousel-inner .item{
+    height: 410px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#myCarousel .carousel-inner .item1{
+    background-image:url("../img/slide_01_2000x410.jpg");
+}
+#myCarousel .carousel-inner .item2{
+    background-image:url("../img/slide_02_2000x410.jpg");
+}
+#myCarousel .carousel-inner .item3{
+    background-image:url("../img/slide_03_2000x410.jpg");
+}
+#myCarousel .carousel-inner .item4{
+    background-image:url("../img/slide_04_2000x410.jpg");
+}
+
+@media (max-width: 768px) {
+    #myCarousel .carousel-inner .item{
+        height: 340px;
+    }
+    #myCarousel .carousel-inner .item1{
+      background-image:url("../img/slide_01_640x340.jpg");
+    }
+    #myCarousel .carousel-inner .item2{
+        background-image:url("../img/slide_02_640x340.jpg");
+    }
+    #myCarousel .carousel-inner .item3{
+         background-image:url("../img/slide_03_640x340.jpg");
+     }
+    #myCarousel .carousel-inner .item4{
+          background-image:url("../img/slide_04_640x340.jpg");
+      }
+}
