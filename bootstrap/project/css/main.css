@@ -419,8 +419,7 @@
 
 
 #buy .product .panel-body{
-    float: right;
-    padding: 0;
+    float: left;
     height: 150px;
     margin-right: 120px;
     position: relative;
