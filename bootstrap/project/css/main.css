@@ -351,21 +351,38 @@
 #buy .panel.product{
     margin-top: 20px;
     box-shadow: 1px 1px 5px #CCC;
-    overflow:  hidden;
     background-color: white;
-
+    position:  relative;
+    height:  150px;
 }
 
 
-
-#buy .product.active{
-    margin-top: 20px;
-    box-shadow: 1px 1px 5px #CCC;
-    overflow:  hidden;
+/**
+active的样式
+ */
+#buy  .product.active,#buy .product.active .panel-heading{
     background-color: #E9232C;
     color: white;
-
 }
+
+#buy  .product.active .panel-heading span,#buy  .product.active .panel-heading p{
+    color: white;
+}
+
+/**
+actived的样式
+ */
+#buy  .product.actived,#buy .product.actived .panel-heading{
+    background-color: #e0e0e0;
+    color: black;
+}
+#buy  .product.actived .panel-heading span,#buy  .product.actived .panel-heading p{
+    color: black;
+}
+
+/**
+一般样式
+ */
 #buy .product .panel-heading{
     position: relative;
     float: right;
@@ -374,23 +391,25 @@
     height: 150px;
     background-color: white;
     text-align: center;
-    padding: 35px 0 45px;
-
-
+    padding: 20px 0 45px;
+    z-index: 10;
 }
+
 #buy .product .panel-heading strong{
     font-size: 36px;
-
-
 }
-#buy .product.active .panel-heading{
+
+#buy .product .panel-heading span,#buy .product .panel-heading p{
+    color: #E9232C;
+}
+
+#buy  .producte.activ .panel-heading{
     position: relative;
     float: right;
     border-left: 1px dashed #CCC;
     width: 120px;
     height: 150px;
     background-color: #E9232C;
-
 }
 
 #buy .product .panel-heading::after{
@@ -416,21 +435,17 @@
     width: 14px;
 }
 
-
-
 #buy .product .panel-body{
     float: left;
     height: 150px;
-    margin-right: 120px;
-    position: relative;
-}
-#buy .product .panel-body.active{
-
-
-
+    position: absolute;
+    top: 0;
+    left:  0;
+    padding-right: 130px;
+    width:  100%;
 }
 
-#buy .product.active .panel-body::before{
+#buy .active.product .panel-body::before{
     content: "\e915";
     position: absolute;
     font-family: 'weijinsuo';
@@ -439,4 +454,48 @@
     font-weight: 100;
     top: -7px;
     left: 0px;
+}
+
+#buy .product .panel-body p{
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+#buy .pane-name{
+    color: #c0c0c0;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#buy .active .panel-money{
+    margin-bottom: 5px;
+}
+
+#buy .tooltips{
+
+    margin: 0;
+    text-align: center;
+}
+#buy .product .panel-heading .tooltips .tip1{
+    height: 18px;
+    width: 18px;
+    color: #E9232C;
+    border: 1px solid #E9232C;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#buy .product .panel-heading .tooltips .tip2{
+    height: 18px;
+    width: 18px;
+    color: #399; !important;
+    border: 1px solid #399;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
 }
