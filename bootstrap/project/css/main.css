@@ -185,7 +185,7 @@
 
 #nav .container,#nav li a,#nav .navbar-right{
     font-size: 14px;
-    line-height: 72px;
+    line-height: 71px;
     vertical-align: middle;
     padding-top: 0;
     padding-bottom: 0;
@@ -221,37 +221,41 @@
     height: 410px;
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#myCarousel .carousel-inner .item1{
-    background-image:url("../img/slide_01_2000x410.jpg");
-}
-#myCarousel .carousel-inner .item2{
-    background-image:url("../img/slide_02_2000x410.jpg");
-}
-#myCarousel .carousel-inner .item3{
-    background-image:url("../img/slide_03_2000x410.jpg");
-}
-#myCarousel .carousel-inner .item4{
-    background-image:url("../img/slide_04_2000x410.jpg");
-}
+/*#myCarousel .carousel-inner .item1{*/
+    /*background-image:url("../img/slide_01_2000x410.jpg");*/
+/*}*/
+/*#myCarousel .carousel-inner .item2{*/
+    /*background-image:url("../img/slide_02_2000x410.jpg");*/
+/*}*/
+/*#myCarousel .carousel-inner .item3{*/
+    /*background-image:url("../img/slide_03_2000x410.jpg");*/
+/*}*/
+/*#myCarousel .carousel-inner .item4{*/
+    /*background-image:url("../img/slide_04_2000x410.jpg");*/
+/*}*/
 
 @media (max-width: 768px) {
+    #nav .container,#nav li a{
+        line-height: 50px;
+    }
     #myCarousel .carousel-inner .item{
-        height: 340px;
+        height: 191px;
     }
-    #myCarousel .carousel-inner .item1{
-      background-image:url("../img/slide_01_640x340.jpg");
-    }
-    #myCarousel .carousel-inner .item2{
-        background-image:url("../img/slide_02_640x340.jpg");
-    }
-    #myCarousel .carousel-inner .item3{
-         background-image:url("../img/slide_03_640x340.jpg");
-     }
-    #myCarousel .carousel-inner .item4{
-          background-image:url("../img/slide_04_640x340.jpg");
-      }
+    /*#myCarousel .carousel-inner .item1{*/
+      /*background-image:url("../img/slide_01_640x340.jpg");*/
+    /*}*/
+    /*#myCarousel .carousel-inner .item2{*/
+        /*background-image:url("../img/slide_02_640x340.jpg");*/
+    /*}*/
+    /*#myCarousel .carousel-inner .item3{*/
+         /*background-image:url("../img/slide_03_640x340.jpg");*/
+     /*}*/
+    /*#myCarousel .carousel-inner .item4{*/
+          /*background-image:url("../img/slide_04_640x340.jpg");*/
+      /*}*/
 }
 
 
@@ -475,6 +479,9 @@ actived的样式
 
     margin: 0;
     text-align: center;
+}
+#buy .product .panel-heading:nth-child(2){
+    color: #E9232C;
 }
 #buy .product .panel-heading .tooltips .tip1{
     height: 18px;
