@@ -17,7 +17,7 @@
 [class^="icon-"],
 [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'weijinsuo' !important;
+    font-family: 'weijinsuo';
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -218,47 +218,33 @@
  */
 
 #myCarousel .carousel-inner .item{
-    height: 410px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/*#myCarousel .carousel-inner .item1{*/
-    /*background-image:url("../img/slide_01_2000x410.jpg");*/
-/*}*/
-/*#myCarousel .carousel-inner .item2{*/
-    /*background-image:url("../img/slide_02_2000x410.jpg");*/
-/*}*/
-/*#myCarousel .carousel-inner .item3{*/
-    /*background-image:url("../img/slide_03_2000x410.jpg");*/
-/*}*/
-/*#myCarousel .carousel-inner .item4{*/
-    /*background-image:url("../img/slide_04_2000x410.jpg");*/
-/*}*/
+#myCarousel .carousel-inner .item img{
 
-@media (max-width: 768px) {
-    #nav .container,#nav li a{
-        line-height: 50px;
-    }
-    #myCarousel .carousel-inner .item{
-        height: 191px;
-    }
-    /*#myCarousel .carousel-inner .item1{*/
-      /*background-image:url("../img/slide_01_640x340.jpg");*/
-    /*}*/
-    /*#myCarousel .carousel-inner .item2{*/
-        /*background-image:url("../img/slide_02_640x340.jpg");*/
-    /*}*/
-    /*#myCarousel .carousel-inner .item3{*/
-         /*background-image:url("../img/slide_03_640x340.jpg");*/
-     /*}*/
-    /*#myCarousel .carousel-inner .item4{*/
-          /*background-image:url("../img/slide_04_640x340.jpg");*/
-      /*}*/
+width: 100%;
+
 }
 
+/*当屏幕小于768px时
+ */
 
+@media (max-width: 768px) {
+    #nav .container, #nav li a {
+        line-height: 50px;
+    }
+}
+/*当屏幕大于768px时
+ */
+
+@media (min-width: 768px) {
+    #myCarousel .carousel-inner .item {
+        height: 410px;
+    }
+}
 /**
 第三部分   特点简介
  */
@@ -342,15 +328,6 @@
 }
 
 
-/*#buy .scroll{  滚动没处理完  */
-/*overflow-x: scroll;*/
-/*}*/
-/*@media screen  and (max-width: 710px){*/
-    /*#buy .scroll{*/
-        /*width: 710px;*/
-    /*}*/
-
-/*}*/
 
 #buy .panel.product{
     margin-top: 20px;
