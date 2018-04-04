@@ -341,24 +341,20 @@ width: 100%;
 /**
 active的样式
  */
-#buy  .product.active,#buy .product.active .panel-heading{
+#buy  .product.active,#buy .product.active .panel-heading,#buy .product.active .panel-body,#buy  .product.active .panel-heading span,#buy  .product.active .panel-heading p{
     background-color: #E9232C;
-    color: white;
-}
-
-#buy  .product.active .panel-heading span,#buy  .product.active .panel-heading p{
     color: white;
 }
 
 /**
 actived的样式
  */
-#buy  .product.actived,#buy .product.actived .panel-heading{
+#buy  .product.actived,#buy .product.actived .panel-heading,#buy .product.actived .panel-heading span{
     background-color: #e0e0e0;
-    color: black;
+    color: #333;
 }
-#buy  .product.actived .panel-heading span,#buy  .product.actived .panel-heading p{
-    color: black;
+#buy  .product.actived .panel-heading p.strong{
+    color: #E9232C;
 }
 
 /**
@@ -380,7 +376,7 @@ actived的样式
     font-size: 36px;
 }
 
-#buy .product .panel-heading span,#buy .product .panel-heading p{
+#buy .product .panel-heading p{
     color: #E9232C;
 }
 
@@ -391,6 +387,10 @@ actived的样式
     width: 120px;
     height: 150px;
     background-color: #E9232C;
+    color: #333;
+}
+#buy  .producte.activ .panel-heading span{
+    color: #333;
 }
 
 #buy .product .panel-heading::after{
@@ -483,3 +483,33 @@ actived的样式
     display: inline-block;
     margin-right: 10px;
 }
+
+
+/**
+投标状态样式
+ */
+#buy .product.state1::after{
+    content: '\e925';
+    font-size: 100px;
+
+}
+#buy .product.state2::after{
+    content: '\e927';
+    font-size: 100px;
+
+}
+#buy .product.state3::after{
+    content: '\e926';
+    font-size: 100px;
+
+}
+#buy .product.state1::after,#buy .product.state2::after,#buy .product.state3::after{
+    font-family: weijinsuo;
+    font-size: 100px;
+    color: #e9232c;
+    position: absolute;
+    top: 10px;
+    right: 130px;
+
+}
+
