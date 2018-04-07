@@ -513,3 +513,195 @@ actived的样式
 
 }
 
+#new .row{
+    padding:50px 0 ;
+}
+#new .new-title p{
+    margin-bottom: 0;
+}
+#new .new-title{
+    font-size: 20px;
+    padding: 10px 15px;
+    border-bottom: 1px dashed #c0c0c0;
+    position: relative;
+
+}
+#new .new-title::after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    font-size: 8px;
+    border-radius: 50%;
+    border: 1px solid #c0c0c0;
+    bottom: -4px;
+    right: -7px;
+}
+
+/**
+新闻4个图标
+ */
+
+.icon-news01:before {
+    content: "\e90e";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news02:before {
+    content: "\e90f";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news03:before {
+    content: "\e910";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news04:before {
+    content: "\e911";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+#new #myTab li a,#new #myTab li a:hover{
+    border: 0;
+}
+#new #myTab li a{
+    border-radius: 50%;
+    background-color: #f5f5f5;;
+    font-size: 16px;
+    margin: 10px 10px;
+}
+#new #myTab li a:hover{
+    background-color: #E9232C;
+    color: white;
+}
+#new #myTabContent{
+    padding:10px 0 ;
+}
+#new #myTabContent p{
+    padding: 5px 5px;
+
+}
+
+
+
+
+
+/**
+合租伙伴
+ */
+#partner {
+    padding: 50px 0;
+}
+
+.partner-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0;
+}
+
+.partner-list > li {
+    display: inline-block;
+    width: calc(100% / 9);
+    font-size: 50px;
+    line-height: 1;
+}
+
+.partner-list > li + li {
+    border-left: 1px dashed #c0c0c0;
+    color: #ddd;
+}
+
+.partner-list > li > a {
+    color: #999;
+}
+
+.partner-list > li > a:hover {
+    text-decoration: none;
+}
+
+.icon-uniE930:hover {
+    color: #df3232;
+}
+
+.icon-uniE930:before {
+    content: "\e946";
+}
+
+.icon-uniE92F:hover {
+    color: #e8380d;
+}
+
+.icon-uniE92F:before {
+    content: "\e92f";
+}
+
+.icon-uniE92E:hover {
+    color: #ed6f00;
+}
+
+.icon-uniE92E:before {
+    content: "\e92e";
+}
+
+.icon-uniE92A:hover {
+    color: #159f69;
+}
+
+.icon-uniE92A:before {
+    content: "\e92a";
+}
+
+.icon-uniE929:hover {
+    color: #07569e;
+}
+
+.icon-uniE929:before {
+    content: "\e929";
+}
+
+.icon-uniE931:hover {
+    color: #004098;
+}
+
+.icon-uniE931:before {
+    content: "\e931";
+}
+
+.icon-uniE92C:hover {
+    color: #d32019;
+}
+
+.icon-uniE92C:before {
+    content: "\e92c";
+}
+
+.icon-uniE92B:hover {
+    color: #3eac4a;
+}
+
+.icon-uniE92B:before {
+    content: "\e92b";
+}
+
+.icon-uniE92D:hover {
+    color: #2bb289;
+}
+
+.icon-uniE92D:before {
+    content: "\e92d";
+}
+
+
+#new #myTab li.active a{
+    background-color: #E9232C;
+}
+
+#buy .scroll{
+    overflow-x: scroll;
+}

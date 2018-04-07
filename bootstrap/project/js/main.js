@@ -30,4 +30,23 @@ $(function () {
     });
 
 
+    //新闻栏换标题
+    $("#new .text-center").text($("#myTab li.active").data('title'));
+    $("#myTab li").click(function () {
+        $("#new .text-center").text($(this).data('title'))
+    })
+
+
+    //给推荐栏的ul设置宽度
+    // li.offsetWidth
+    if(window.innerWidth<799){
+        var li_lists=$("#buy ul li[role='presentation']");
+        var li_lengths=0;
+        li_lists.each(function (index,ele) {
+            li_lengths=li_lengths+ele.offsetWidth;
+        })
+        $("#buy ul").width(li_lengths);
+    }
+
+
 })
