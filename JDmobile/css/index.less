@@ -1,0 +1,168 @@
+/**
+京东页面
+ */
+.jd-layout {
+  max-width: 640px;
+  min-width: 300px;
+  margin: 0 auto;
+  position: relative;
+
+  /**
+京东头部
+ */
+  .jd-header {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    /**
+    京东头部的内容区域
+     */
+    .jd-header-content {
+      max-width: 640px;
+      min-width: 300px;
+      margin: 0 auto;
+      height: 40px;
+      background: rgba(212, 32, 0, 0.8);
+      position: relative;
+
+      /**
+    京东头部的logo和搜索框
+     */
+      .icon-logo {
+        display: block;
+        background-position: 0 -103px;
+        width: 60px;
+        height: 36px;
+        position: absolute;
+        left: 10px;
+        top: 4px;
+      }
+
+      .search {
+        width: 100%;
+        //background: yellow;
+        padding: 0 54px 0 75px;
+        height: 40px;
+        position: relative;
+
+        input {
+          border-radius: 15px;
+          width: 100%;
+          height: 30px;
+          margin: 5px 0;
+          text-indent: 2.5em;
+
+        }
+
+        .icon-search {
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-position: -60px -109px;
+          position: absolute;
+          top: 10px;
+          left: 85px;
+        }
+
+      }
+
+      .login {
+
+        width: 50px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 15px;
+        color: #FFF;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+    }
+
+  }
+
+  .jd-banner {
+
+    min-width: 300px;
+    max-width: 640px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+
+    ul.clearfix {
+      width: 6000px;
+
+      li {
+        float: left;
+        img {
+          min-width: 300px;
+          max-width: 640px;
+        }
+      }
+    }
+
+    ul.circle {
+      position: absolute;
+      left: 50%;
+      margin-left: -56px;
+      bottom: 15px;
+      height: 4px;
+
+      li {
+        width: 6px;
+        height: 6px;
+
+        margin: 0 4px;
+        float: left;
+        background: transparent;
+        border: 1px solid #FFF;
+
+        border-radius: 50%;
+
+      }
+    }
+
+  }
+
+  .jd-nav {
+    border-bottom: 1px solid #e0e0e0;
+
+    ul {
+      padding: 0 3.75%;
+      padding-top: 11px;
+
+      li {
+        float: left;
+        width: 25%;
+
+        a {
+          display: block;
+          height: 69px;
+          width: 100%;
+          text-align: center;
+
+          img {
+            width: 40px;
+            height: 40px;
+
+          }
+
+          p {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 6px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
