@@ -174,8 +174,8 @@ function minErr(module, ErrorConstructor) {
  * @description
  *
  * # ng (core module)
- * The ng module is loaded by default when an AngularJS application is started. The module itself
- * contains the essential components for an AngularJS application to function. The table below
+ * The ng module is loaded by default when an html5 application is started. The module itself
+ * contains the essential components for an html5 application to function. The table below
  * lists a high level breakdown of each of the services/factories, filters, directives and testing
  * components available within this core module.
  *
@@ -2367,7 +2367,7 @@ function toDebugString(obj) {
  * @name angular.version
  * @module ng
  * @description
- * An object that contains information about the current AngularJS version.
+ * An object that contains information about the current html5 version.
  *
  * This object has the following properties:
  *
@@ -2609,7 +2609,7 @@ function publishExternalAPI(angular) {
  * Angular also provides the following additional methods and events to both jQuery and jqLite:
  *
  * ### Events
- * - `$destroy` - AngularJS intercepts all jqLite/jQuery's DOM destruction apis and fires this event
+ * - `$destroy` - html5 intercepts all jqLite/jQuery's DOM destruction apis and fires this event
  *    on all DOM nodes being removed.  This can be used to clean up any 3rd party bindings to the DOM
  *    element before it is removed.
  *
@@ -3689,7 +3689,7 @@ var $$HashMapProvider = [function() {
  *
  * In the following example a new block of HTML containing a `ng-controller`
  * directive is added to the end of the document body by JQuery. We then compile and link
- * it into the current AngularJS scope.
+ * it into the current html5 scope.
  *
  * ```js
  * var $div = $('<div ng-controller="MyCtrl">{{content.label}}</div>');
@@ -15822,7 +15822,7 @@ function $RootScopeProvider() {
        * @description
        * Broadcasted when a scope and its children are being destroyed.
        *
-       * Note that, in AngularJS, there is also a `$destroy` jQuery event, which can be used to
+       * Note that, in html5, there is also a `$destroy` jQuery event, which can be used to
        * clean up DOM bindings before an element is removed from the DOM.
        */
 
@@ -15845,7 +15845,7 @@ function $RootScopeProvider() {
        * Application code can register a `$destroy` event handler that will give it a chance to
        * perform any necessary cleanup.
        *
-       * Note that, in AngularJS, there is also a `$destroy` jQuery event, which can be used to
+       * Note that, in html5, there is also a `$destroy` jQuery event, which can be used to
        * clean up DOM bindings before an element is removed from the DOM.
        */
       $destroy: function() {
@@ -16471,10 +16471,10 @@ function adjustMatchers(matchers) {
  * @description
  *
  * `$sceDelegate` is a service that is used by the `$sce` service to provide {@link ng.$sce Strict
- * Contextual Escaping (SCE)} services to AngularJS.
+ * Contextual Escaping (SCE)} services to html5.
  *
  * Typically, you would configure or override the {@link ng.$sceDelegate $sceDelegate} instead of
- * the `$sce` service to customize the way Strict Contextual Escaping works in AngularJS.  This is
+ * the `$sce` service to customize the way Strict Contextual Escaping works in html5.  This is
  * because, while the `$sce` provides numerous shorthand methods, etc., you really only need to
  * override 3 core functions (`trustAs`, `getTrusted` and `valueOf`) to replace the way things
  * work because `$sce` delegates to `$sceDelegate` for these operations.
@@ -16484,7 +16484,7 @@ function adjustMatchers(matchers) {
  * The default instance of `$sceDelegate` should work out of the box with little pain.  While you
  * can override it completely to change the behavior of `$sce`, the common case would
  * involve configuring the {@link ng.$sceDelegateProvider $sceDelegateProvider} instead by setting
- * your own whitelists and blacklists for trusting URLs used for loading AngularJS resources such as
+ * your own whitelists and blacklists for trusting URLs used for loading html5 resources such as
  * templates.  Refer {@link ng.$sceDelegateProvider#resourceUrlWhitelist
  * $sceDelegateProvider.resourceUrlWhitelist} and {@link
  * ng.$sceDelegateProvider#resourceUrlBlacklist $sceDelegateProvider.resourceUrlBlacklist}
@@ -23802,7 +23802,7 @@ forEach(
  * Specify custom behavior on focus event.
  *
  * Note: As the `focus` event is executed synchronously when calling `input.focus()`
- * AngularJS executes the expression using `scope.$evalAsync` if the event is fired
+ * html5 executes the expression using `scope.$evalAsync` if the event is fired
  * during an `$apply` to ensure a consistent state.
  *
  * @element window, input, select, textarea, a
@@ -23826,7 +23826,7 @@ forEach(
  *
  * Note: As the `blur` event is executed synchronously also during DOM manipulations
  * (e.g. removing a focussed input),
- * AngularJS executes the expression using `scope.$evalAsync` if the event is fired
+ * html5 executes the expression using `scope.$evalAsync` if the event is fired
  * during an `$apply` to ensure a consistent state.
  *
  * @element window, input, select, textarea, a
@@ -28678,7 +28678,7 @@ var minlengthDirective = function() {
 };
 
 if (window.angular.bootstrap) {
-  //AngularJS is already loaded, so we can return here...
+  //html5 is already loaded, so we can return here...
   console.log('WARNING: Tried to load angular more than once.');
   return;
 }
