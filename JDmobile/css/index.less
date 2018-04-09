@@ -3,7 +3,9 @@
  */
 
 @jd-red: #d8505c;
-@less-grey:#666;
+@less-grey: #666;
+@white: #fff;
+@lesswhite: #e0e0e0;
 
 body {
   background-color: #f5f5f5;
@@ -177,7 +179,7 @@ body {
 
   main {
     width: 100%;
-    margin: 0 5px;
+    padding: 0 5px;
 
     /**
     公共样式 product-top和product-bottom
@@ -209,6 +211,9 @@ body {
 
     }
 
+    /*
+    京东秒杀
+    */
     .jd-product {
       margin-top: 8px;
       box-shadow: 0 0 1px 1px #e0e0e0;
@@ -280,49 +285,81 @@ body {
         margin-right: 5px;
       }
 
-
-      .product-bottom{
-        ul{
+      .product-bottom {
+        ul {
           padding: 10px 0;
           width: 100%;
 
-
-
-
-          li{
-            a{
+          li {
+            a {
               display: block;
             }
             float: left;
             width: 33.33333%;
 
-            img{
+            img {
               width: 66.66%;
               display: block;
               margin: 0 auto;
             }
-            .img-box{
+            .img-box {
               border-right: 1px solid #e0e0e0;
             }
           }
 
-
           text-align: center;
           font-size: 12px;
-          .newprice{
+          .newprice {
             color: @jd-red;
 
           }
 
-          .oldprice{
+          .oldprice {
             color: @less-grey;
-
 
           }
 
         }
 
+      }
 
+    }
+
+    /**
+    热门商品公共样式
+     */
+    .hot {
+
+      .product-bottom {
+        width: 100%;
+        border-top: 1px solid @lesswhite;
+
+        .p_right {
+          float: right;
+          width: 50%;
+        }
+        .p_left {
+          float: left;
+          width: 50%;
+
+        }
+      }
+
+      .b_left {
+        border-left: 1px solid @lesswhite;
+      }
+
+      .b_right {
+        border-right: 1px solid @lesswhite;
+      }
+
+      .b_bottom {
+        border-bottom: 1px solid @lesswhite;
+      }
+
+      img {
+        display: block;
+        width: 100%;
       }
 
     }
