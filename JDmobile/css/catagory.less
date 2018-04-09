@@ -1,0 +1,192 @@
+@import "base.less";
+
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/**
+图标
+ */
+.jd-topbar {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #e0e0e0;
+  background: url("../img/header-bg.png") repeat-x;
+  background-size: 1px 44px;
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .icon-goback {
+    width: 20px;
+    height: 20px;
+    margin: 12px 10px;
+    background-position: -22px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .icon-menu {
+    /*
+      此处是以margin来定位填充背景
+     */
+    //width: 20px;
+    //height: 20px;
+    //margin: 12px 10px;
+    //background-position: -60px 0;
+    //position: absolute;
+    //top:0;
+    //right: 0;
+    //z-index: 10;
+    /*
+    按钮的另一种写法是以content填充背景
+      下面是以padding
+     */
+
+    background-clip: content-box;
+    background-origin: content-box;
+    padding: 12px 10px;
+    width: 44px;
+    height: 40px;
+    background-position: -58px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+  }
+
+  form {
+    margin: 0 40px;
+
+    .search {
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 32px;
+      margin-top: 6px;
+      text-indent: 1em;
+      border-radius: 5px;
+      border: 1px solid #bfbfbf;
+    }
+
+  }
+
+}
+
+.jd-catagory {
+  padding-top: 45px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 999;
+
+  .jd-catagory-left {
+    padding-top: 45px;
+    width: 90px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    ul {
+      li {
+        float: left;
+        background-color: #f3f4f6;
+        color: #000;
+
+        a {
+          display: block;
+          width: 90px;
+          height: 50px;
+          border-bottom: 1px solid #e0e0e0;
+          border-right: 1px solid #e0e0e0;
+          text-align: center;
+          font-size: 12px;
+          line-height: 49px;
+        }
+      }
+
+      /**
+      选中的样式
+       */
+      li.now a {
+        background-color: @white;
+        color: @jd-red;
+      }
+    }
+
+  }
+
+  .jd-catagory-right {
+    padding-top: 45px;
+    width: 100%;
+    height: 100%;
+    padding-left: 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+
+    .jd-catagory-right-box {
+      width: 100%;
+      height: 100%;
+      padding: 10px 12px;
+      .jd-banner {
+
+        a {
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+
+      }
+
+      .goods {
+        .goods-catagary {
+          font-size: 12px;
+
+          margin-top: 20px;
+
+          h3 {
+            color: #888;
+            margin-bottom: 10px;
+
+          }
+          ul li {
+            float: left;
+            width: 33.333%;
+            padding: 0 10px;
+
+            a {
+
+              img {
+                display: block;
+                width: 62px;
+                height: 62px;
+                margin: 0 auto;
+              }
+              .good-name {
+                text-align: center;
+                line-height: 30px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
