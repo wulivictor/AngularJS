@@ -54,3 +54,62 @@ input,button{
   background: url("../img/sprites.png") no-repeat;
   background-size:200px 200px;
 }
+
+
+/**
+topbar公共样式
+ */
+.jd-topbar {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #e0e0e0;
+  background: url("../img/header-bg.png") repeat-x;
+  background-size: 1px 44px;
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .icon-goback {
+    width: 20px;
+    height: 20px;
+    margin: 12px 10px;
+    background-position: -22px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .icon-menu {
+    /*
+      此处是以margin来定位填充背景
+     */
+    //width: 20px;
+    //height: 20px;
+    //margin: 12px 10px;
+    //background-position: -60px 0;
+    //position: absolute;
+    //top:0;
+    //right: 0;
+    //z-index: 10;
+    /*
+    按钮的另一种写法是以content填充背景
+      下面是以padding
+     */
+
+    background-clip: content-box;
+    background-origin: content-box;
+    padding: 12px 10px;
+    width: 44px;
+    height: 40px;
+    background-position: -58px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+  }
+
+
+}
