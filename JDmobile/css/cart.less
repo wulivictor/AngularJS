@@ -63,6 +63,7 @@ body {
 .jd-shop {
   width: 100%;
   margin-top: 10px;
+  z-index: 99;
 
   .jd-shop-title {
     height: 36px;
@@ -248,3 +249,145 @@ body {
   }
 }
 
+.totalsum {
+  width: 100%;
+  height: 61px;
+  border-top: 1px solid @lesswhite;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #313131;
+  color: @white;
+  z-index: 100;
+
+  .check-all {
+    width: 69px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .jd-check-box {
+      display: block;
+      height: 60px;
+      width: 38px;
+      padding: 20px 8px 20px 10px;
+      float: left;
+
+    }
+    .check-text {
+      display: block;
+      font-size: 13px;
+      height: 60px;
+      line-height: 60px;
+      float: left;
+    }
+
+  }
+
+  .total-message {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 75px;
+    margin-right: 118px;
+    width: 100%;
+    height: 100%;
+    .p-top {
+      font-size: 16px;
+      margin-top: 15px;
+
+    }
+    .p-bot {
+      margin-top: 5px;
+      font-size: 10px;
+
+    }
+
+  }
+
+  .submit {
+    height: 100%;
+    width: 118px;
+    background-color: @jd-red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    .submit-text {
+      height: 100%;
+      display: block;
+      line-height: 60px;
+      font-size: 18px;
+      text-align: center;
+      vertical-align: middle;
+      color: @white;
+    }
+
+  }
+
+}
+
+.window-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+
+  .alert-box {
+    position: absolute;
+    height: 146px;
+    width: 85%;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -73px;
+    left: 50%;
+    margin-left: -42.5%;
+    border-radius: 5px;
+    box-shadow: 1px 5px 5px @less-grey;
+    padding: 10px;
+    .alert-title {
+      line-height: 80px;
+      height: 80px;
+      width: 100%;
+      font-size: 16px;
+      color: #666666;
+      text-align: center;
+      border-bottom: 1px solid @lesswhite;
+
+    }
+    .btnbox {
+
+      width: 100%;
+      padding: 0 10px;
+      margin-top: 10px;
+      font-size: 15px;
+
+      .cancle {
+        float: left;
+        line-height: 36px;
+        width: 40%;
+        border-radius: 5px;
+        border: 1px solid @lesswhite;
+        background-color: @white;
+        color: #888;
+        height: 36px;
+
+      }
+      .submit {
+        float: right;
+        width: 40%;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 5px;
+        border: 1px solid @lesswhite;
+        background-color: @jd-red;
+        color: @white;
+
+      }
+
+    }
+  }
+}

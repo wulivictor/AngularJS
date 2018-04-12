@@ -10,14 +10,15 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/cart.css">
-
     <script src="js/less.min.js"></script>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/cart.js"></script>
+
 </head>
 <body>
 <header class="jd-topbar">
     <a class="icon-goback" href="#"></a>
     <h2>购物车</h2>
-
     <a class="icon-menu" href="#"></a>
 </header>
 <div class="safe-tip">
@@ -26,18 +27,15 @@
     </p>
 </div>
 <div class="jd-shop">
-
     <div class="jd-shop-title">
         <div class="jd-checkbox">
             <div class="jd-check">
-
             </div>
         </div>
         <div class="title-name clearfix">
             <img src="img/buy-logo.png" alt="京东">
             <span class="leftspan">京东自营</span>
             <span class="rightspan">您享受满79元免运费服务</span>
-
         </div>
     </div>
     <div class="jd-shop-content clearfix">
@@ -48,36 +46,24 @@
         </div>
 
         <div class="jd-img-detail clearfix">
-
-
             <a class="goods-pic" href="#">
                 <img src="img/detail01.jpg" alt="商品">
             </a>
-
             <div class="detail">
                 <a class="text-detail" href="#">华为（HUAWEI）荣耀平板优享版 Wifi 8英寸平板电脑（高通骁龙 64位四核1280×800 2G/16G 4800mAh）香槟金</a>
                 <p>¥1000.00</p>
-
-
                 <div class="option clearfix">
                     <div class="change">
                         <span class="change-number-left">-</span>
                         <input type="tel">
                         <span class="change-number-right">+</span>
                     </div>
-
-
                     <div class="delete">
                         <div class="delete-box-top"></div>
                         <div class="delete-box-bottom"></div>
                     </div>
-
                 </div>
-
-
             </div>
-
-
         </div>
     </div>
     <div class="jd-shop-content clearfix">
@@ -86,46 +72,30 @@
             <div class="jd-check">
             </div>
         </div>
-
         <div class="jd-img-detail clearfix">
-
-
             <a class="goods-pic" href="#">
                 <img src="img/detail01.jpg" alt="商品">
             </a>
-
             <div class="detail">
                 <a class="text-detail" href="#">华为（HUAWEI）荣耀平板优享版 Wifi 8英寸平板电脑（高通骁龙 64位四核1280×800 2G/16G 4800mAh）香槟金</a>
                 <p>¥1000.00</p>
-
-
                 <div class="option clearfix">
                     <div class="change">
                         <span class="change-number-left">-</span>
                         <input type="tel">
                         <span class="change-number-right">+</span>
                     </div>
-
-
                     <div class="delete">
                         <div class="delete-box-top"></div>
                         <div class="delete-box-bottom"></div>
                     </div>
-
                 </div>
-
-
             </div>
-
-
         </div>
     </div>
-
 </div>
-
 
 <div class="jd-shop">
-
     <div class="jd-shop-title">
         <div class="jd-checkbox">
             <div class="jd-check">
@@ -219,8 +189,77 @@
 
         </div>
     </div>
+</div>
+
+
+<div class="totalsum">
+
+    <div class="check-all clearfix">
+        <div class="jd-check-box">
+            <div class="jd-check">
+            </div>
+        </div>
+        <span class="check-text">
+            全选
+        </span>
+
+
+
+    </div>
+    <div class="total-message">
+        <p class="p-top">合计：¥<span>0.00</span></p>
+        <p class="p-bot">总额：¥<span>0.00</span> 返现：<span>¥0.00</span></p>
+
+    </div>
+
+
+
+
+    <div class="submit">
+        <a class="submit-text">
+            去结算(<span>0</span>)
+        </a>
+
+    </div>
+
 
 </div>
+
+
+
+
+<!-- alert-->
+<div class="window-alert">
+
+
+    <div class="alert-box">
+
+
+        <div class="alert-title">
+            您确认删除这件商品吗？
+
+
+        </div>
+        <div class="btnbox clearfix">
+
+            <button class="cancle">取消</button>
+            <button class="submit">确定</button>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
 
 </body>
 </html>
