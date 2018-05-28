@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>factoryMode</title>
+</head>
+<body>
+
+<script>
+    function people(name, age) {
+        this.age = age;
+        this.name = name;
+
+        // 对象方法   实例化后每个实例都可以使用
+        this.message = function () {
+            alert(this.name + "\n" + this.age)
+        }
+
+    }
+
+    // 类方法  不需要实例化   直接可以使用
+    people.add = function () {
+        alert('add')
+    }
+
+    // 原型方法
+    people.prototype.remove = function () {
+        alert('remove')
+    }
+
+    debugger
+
+</script>
+</body>
+</html>

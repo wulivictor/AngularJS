@@ -1,5 +1,4 @@
 $(function () {
-
     //轮播图部分
     var unslider04 = $('.jd-banner').unslider({
             dots: true
@@ -9,7 +8,4 @@ $(function () {
         var fn = this.className.split(' ')[1];
         data04[fn]();
     })
-
-
-
 })
