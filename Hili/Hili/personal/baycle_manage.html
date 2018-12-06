@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/index_style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<!--<link href="../css/mui.picker.css" rel="stylesheet" />
+		<link href="../css/mui.dtpicker.css" rel="stylesheet" />-->
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+		<style>
+			.mui-content {
+				height: 0px;
+				margin: 0px;
+				background-color: #efeff4;
+			}
+			
+			h5.mui-content-padded {
+				margin-left: 3px;
+				margin-top: 20px !important;
+			}
+			
+			h5.mui-content-padded:first-child {
+				margin-top: 12px !important;
+			}
+			
+			.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
+			
+			.ui-alert {
+				text-align: center;
+				padding: 20px 10px;
+				font-size: 16px;
+			}
+			
+			* {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+			}
+			
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 22%;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			
+			.inputdiv {
+				background: white;
+				border: 1px solid #bbbbbb;
+				width: 250px;
+				height: 50px;
+				left: 62.5px;
+				top: 250px;
+				transform: rotate(0deg);
+				-webkit-transform: rotate(0deg);
+				font-size: 14.0px;
+				padding: 0px;
+				border-radius: 10px;
+				border-width: 1px;
+				border-style: solid;
+				//text-align:center;
+				line-height: 20px;
+				font-weight: normal;
+				font-style: normal;
+				z-index: 5;
+				opacity: 1;
+				pointer-events: auto;
+			}
+			
+			#photo {
+				height: 80px;
+				width: 120px;
+				border: 1px solid #aaaaaa;
+			}
+			
+			.table {
+				border: 0px;
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			
+			.tr {
+				height: 30px;
+			}
+			
+			.tr td {
+				border-bottom: 1px solid #BBB;
+			}
+			
+			td{
+				
+				padding-left: 10px
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #3eede7;">
+			<h1 class="mui-title" style="font-size: 16px;;">车辆管理</h1>
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav" style="color: #aaaaaa"></span>
+				</button>
+			<div style="float: right;">
+				<!--<a href="#" style="color: #575757; font-size: 12px;">
+					<p style="line-height: 2px;;">&nbsp;</p>保存&nbsp;</a>-->
+			</div>
+
+		</header>
+
+		<form id='login-form' style="margin-top: 45px;" class="mui-input-group">
+			<table style="width: 100%;">
+											<p style="line-height: 5px;">&nbsp;</p>
+
+				<tr>
+					<center>
+						<img src="../images/iconfont-tianjia.png" id="photo"  style=" height:80px; width:120px;padding: 0px; margin: 0px;"/><br/>
+						<p style="color:black;font-size: 14px;">请上传车辆照片</p>
+					</center>
+
+				</tr>
+
+				<tr style="height: 50px;border-bottom: 1px  solid  #bbbbbb;border-top: 1px  solid  #bbbbbb;  width: 100%;">
+
+					<td style="width: 27%;">车辆名称</td>
+					<td> <input style="margin: 0px; padding: 0px;font-size: 12px;" type="text" class="mui-input-clear" placeholder="给您的车辆标个名称（如小牛电动车）">
+					</td>
+
+				</tr>
+
+				<tr style="height: 50px;border-bottom: 1px  solid  #bbbbbb; width: 100%;">
+
+					<td>出租说明</td>
+					<td> <input style="margin: 0px; padding: 0px; font-size: 12px;" type="text" class="mui-input-clear" placeholder="请详细补充车辆说明及约定">
+					</td>
+				</tr>
+				<tr style="height: 50px; border-bottom: 1px  solid  #bbbbbb; width: 100%;">
+
+					<td>开始闲置</td>
+					<td>
+						<a id='startdate' style="color: #aaaaaa;font-size: 12px;">请选择您车辆闲置的开始时间</a>
+						<div id="result"></div>
+
+					</td>
+
+				</tr>
+
+				<tr style="height: 50px;border-bottom: 1px  solid  #bbbbbb; width: 100%;">
+
+					<td>结束闲置</td>
+					<td>
+						<a id='enddate' style="color: #aaaaaa;font-size: 12px;">请选择您车辆闲置的结束时间</a>
+						<div id="result1"></div>
+
+					</td>
+</tr>
+			</table>
+
+		</form>
+
+		<div class="mui-content">
+			<div class="mui-row">
+				<div class="mui-col-sm-6 mui-col-xs-6">
+
+					<center>
+						<input type="button" id='login' class="mui-btn mui-btn-block mui-btn-primary" value="发布信息" style=" color:white; width:120px; height: 40px; background-color: #ff9800; border: 0px;border-radius: 5px; font-size: 20px; font-weight: bold;" />
+
+					</center>
+				</div>
+				<div class="mui-col-sm-6 mui-col-xs-6">
+					<center>
+						<input type="button" id='login' class="mui-btn mui-btn-block mui-btn-primary" value="撤销发布" style=" color:white;width:120px; height: 40px; background-color: #ff9800; border: 0px;border-radius: 5px; font-size: 20px; font-weight: bold;" />
+					</center>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+
+		<script src="js/mui.picker.min.js"></script>
+		<script>
+			(function($) {
+				$.init();
+				//时间1
+				var result = $('#result')[0];
+				var btns = $('#startdate');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var _self = this;
+						if(_self.picker) {
+							_self.picker.show(function(rs) {
+
+								result.innerText = '选择结果: ' + rs.text;
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						} else {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							/*
+							 * 首次显示时实例化组件
+							 * 示例为了简洁，将 options 放在了按钮的 dom 上
+							 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+							 */
+							_self.picker = new $.DtPicker(options);
+							_self.picker.show(function(rs) {
+								/*
+								 * rs.value 拼合后的 value
+								 * rs.text 拼合后的 text
+								 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+								 * rs.m 月，用法同年
+								 * rs.d 日，用法同年
+								 * rs.h 时，用法同年
+								 * rs.i 分（minutes 的第二个字母），用法同年
+								 */
+								result.innerText = rs.text;
+
+								/* 
+								 * 返回 false 可以阻止选择框的关闭
+								 * return false;
+								 */
+								/*
+								 * 释放组件资源，释放后将将不能再操作组件
+								 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+								 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+								 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+								 */
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						}
+
+					}, false);
+				});
+
+				//时间2
+
+				var btns = $('#enddate');
+
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var _self = this;
+						if(_self.picker) {
+							_self.picker.show(function(rs) {
+
+								result.innerText = '选择结果: ' + rs.text;
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						} else {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							/*
+							 * 首次显示时实例化组件
+							 * 示例为了简洁，将 options 放在了按钮的 dom 上
+							 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+							 */
+							_self.picker = new $.DtPicker(options);
+							_self.picker.show(function(rs) {
+								/*
+								 * rs.value 拼合后的 value
+								 * rs.text 拼合后的 text
+								 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+								 * rs.m 月，用法同年
+								 * rs.d 日，用法同年
+								 * rs.h 时，用法同年
+								 * rs.i 分（minutes 的第二个字母），用法同年
+								 */
+								result.innerText = rs.text;
+
+								/* 
+								 * 返回 false 可以阻止选择框的关闭
+								 * return false;
+								 */
+								/*
+								 * 释放组件资源，释放后将将不能再操作组件
+								 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+								 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+								 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+								 */
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						}
+
+					}, false);
+				});
+				//job的点击事件
+
+				document.getElementById("job").addEventListener("tap", function() {
+					var picker = new mui.PopPicker();
+
+					picker.setData([{
+							value: 'zz',
+							text: '智子'
+						},
+
+						{
+							value: 'zz',
+							text: '待定'
+						}, {
+							value: 'zz',
+							text: '待定'
+						}, {
+							value: 'zz',
+							text: '待定'
+						}, {
+							value: 'zz',
+							text: '待定'
+						}, {
+							value: 'zz',
+							text: '待定'
+						}
+
+					]);
+					picker.show(function(selectItems) {
+						console.log(selectItems[0].text); //智子
+						console.log(selectItems[0].value); //zz 
+					})
+				});
+
+			})(mui);
+		</script>
+	</body>
+
+</html>

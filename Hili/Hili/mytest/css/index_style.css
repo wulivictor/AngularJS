@@ -1,0 +1,38 @@
+.logo{
+	padding: 0px;
+	
+
+　　　　top:50%;
+
+　　　　left:50%;
+
+　　　　margin-top:-74px;
+
+　　　　margin-left：-60px;
+	
+	
+	margin-top: 50px;
+	margin-bottom: 25px;
+
+
+
+
+
+　　
+
+　　
+	
+}
+
+
+
+.link{
+text-align: center;
+margin-top: 10px;
+margin-bottom: 55px;
+
+}
+
+.link{color:red; text-decoration:none;}/*链接设置*/
+.link:visited{color:#3399CC; text-decoration:none;}/*访问过的链接设置*/
+.link:hover{color:#CF0000; text-decoration:none;}/*鼠标放上的链接设置*/
